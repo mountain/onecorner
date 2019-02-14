@@ -5,11 +5,11 @@
 {% block content %}
 <div class="container">
   <div class="row full">
-    <div class="col-3" id="menu">
-      <div id="site-name" class="text-left">
+    <div class="col-2" id="menu">
+      <div class="text-left" id="site-name">
         <a class="link" href="/">壹角</a>
       </div>
-      <div id="links" class="text-left">
+      <div class="text-center" id="links">
           <a class="link" href="/thinking">遐思咏怀</a>
           <a class="link" href="/seeking">蒹葭苍苍</a><br>
           <a class="link" href="/notes">吉光片羽</a>
@@ -17,7 +17,7 @@
           <a class="link" href="/about">关于</a>
       </div>
     </div>
-    <div class="col-9" id="articles">
+    <div class="col-10" id="articles">
         <div class="cards">
             {% for page in paginator.pages %}
             {{ post_macros::card(page=page) }}
