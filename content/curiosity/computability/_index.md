@@ -16,6 +16,5 @@ template = "collection.html"
 # Your own data
 [extra]
 collection = "notes"
-background_image = "/photo/002.jpg"
 +++
 
