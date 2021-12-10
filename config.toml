@@ -2,8 +2,8 @@
 base_url = "https://onecorner.org"
 
 # Used in RSS by default
-title = ""
-description = ""
+title = "一角"
+description = "角落里的只言片语"
 
 # the default language, used in RSS and coming i18n
 default_language = "zh"
@@ -20,19 +20,6 @@ generate_rss = false
 
 # The number of articles to include in the RSS feed
 rss_limit = 20
-
-# The taxonomies to be rendered for that site and their configuration
-# Example:
-#     taxonomies = [
-#       {name = "tags", rss = true}, # each tag will have its own RSS feed
-#       {name = "categories", paginate_by = 5},  # 5 items per page for a term
-#       {name = "authors"}, # Basic definition: no RSS or pagination
-#     ]
-#
-taxonomies = [
-    {name = "tags", rss = true}, # each tag will have its own RSS feed
-    {name = "categories", paginate_by = 5},  # 5 items per page for a term
-]
 
 # Whether to compile the Sass files found in the `sass` directory
 compile_sass = true
@@ -57,9 +44,14 @@ ignored_content = []
 # A list of directories to search for additional `.sublime-syntax` files in.
 extra_syntaxes = []
 
-# Optional translation object. The key if present should be a language code
-[translations]
-
-# You can put any kind of data in there and it
-# will be accessible in all templates
 [extra]
+hyde_sticky = true
+hyde_reverse = true
+hyde_theme = ""
+hyde_links = [
+    {url = "/essay", name = "个人文字"},
+    {url = "/curiosity", name = "探索求知"},
+    {url = "/theotherway", name = "另类思考"},
+    {url = "/gallery", name = "影像记"},
+    {url = "/about", name = "关于"},
+]

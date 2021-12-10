@@ -1,56 +1,90 @@
-{% extends "base.html" %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+    {% if config.generate_rss %}
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") }}">
+    {% endif %}
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    {% block css %}
+    <link rel="stylesheet" href="{{ get_url(path="site.css", trailing_slash=false) }}">
+    {% endblock css %}
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    {% block extra_head %}
+    {% endblock extra_head %}
+
+</head>
+
+<body class="cover">
 
 {% block content %}
 <div class="container">
-  <div class="row full">
-    <div class="col-2" id="title">
-      <div class="site-title text-center">
-        <a class="link" href="/">一角</a>
-      </div>
+    <div class="row full">
+        <div class="col-2" id="title">
+            <div class="site-title text-center">
+                <a class="link" href="/">一角</a>
+            </div>
+        </div>
+        <div class="col-3" id="essay">
+            <div class="category text-right">
+                <a class="link" href="/essay">个人文字</a>
+            </div>
+            <div class="links text-right">
+                <a class="link" href="/essay/thinking">思考</a>
+                <a class="link" href="/essay/pursuit">追寻</a>
+                <a class="link" href="/essay/notes">笔记</a>
+                <a class="link" href="/essay/travel">游历</a>
+            </div>
+        </div>
+        <div class="col-3" id="curiosity">
+            <div class="category text-right">
+                <a class="link" href="/curiosity">探索求知</a>
+            </div>
+            <div class="links text-right">
+                <a class="link" href="/curiosity/computability">可计算</a><br>
+                <a class="link" href="/curiosity/number">全新的数</a><br>
+            </div>
+        </div>
+        <div class="col-3" id="theotherway">
+            <div class="category text-right">
+                <a class="link" href="/theotherway">另类思考</a>
+            </div>
+            <div class="links text-right">
+                <a class="link" href="https://github.com/mountain/the-book">异星杂谈</a><br>
+                <a class="link" href="https://www.bilibili.com/video/BV1Lb411p7jL">凿空厚壁</a><br>
+            </div>
+        </div>
     </div>
-    <div class="col-3" id="essay">
-      <div class="category text-right">
-        <a class="link" href="/essay">个人文字</a>
-      </div>
-      <div class="links text-right">
-          <a class="link" href="/essay/thinking">思考</a>
-          <a class="link" href="/essay/pursuit">追寻</a>
-          <a class="link" href="/essay/notes">笔记</a>
-          <a class="link" href="/essay/travel">游历</a>
-      </div>
+    <div class="row full">
+        <div class="col-9" style="z-index: -1">
+        </div>
+        <div class="col-3" id="gallery">
+            <div class="category text-right">
+                <a class="link" href="/gallery">影像记</a>
+            </div>
+            <div class="links text-right">
+                <a class="link" href="/gallery/city">城市</a><br>
+                <a class="link" href="/gallery/museum">博物馆</a><br>
+                <a class="link" href="/gallery/scenery">山水风物</a><br>
+            </div>
+        </div>
     </div>
-    <div class="col-3" id="curiosity">
-      <div class="category text-right">
-        <a class="link" href="/curiosity">探索求知</a>
-      </div>
-      <div class="links text-right">
-          <a class="link" href="/curiosity/computability">可计算</a><br>
-          <a class="link" href="/curiosity/number">全新的数</a><br>
-      </div>
-    </div>
-    <div class="col-3" id="theotherway">
-      <div class="category text-right">
-        <a class="link" href="/theotherway">另类思考</a>
-      </div>
-      <div class="links text-right">
-          <a class="link" href="/theotherway/different">异星杂谈</a><br>
-          <a class="link" href="/theotherway/digging">凿空厚壁</a><br>
-      </div>
-    </div>
-  </div>
-  <div class="row full">
-    <div class="col-9">
-    </div>
-    <div class="col-3" id="gallery">
-      <div class="category text-right">
-        <a class="link" href="/gallery">影像记</a>
-      </div>
-      <div class="links text-right">
-          <a class="link" href="/gallery/city">城市</a><br>
-          <a class="link" href="/gallery/museum">博物馆</a><br>
-          <a class="link" href="/gallery/scenery">山水风物</a><br>
-      </div>
-    </div>
-  </div>
 </div>
+{% for page in section.pages | reverse %}{% endfor %}
 {% endblock content %}
+
+{% block footer %}
+{% endblock footer %}
+
+</body>
+</html>

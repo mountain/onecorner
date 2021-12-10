@@ -11,7 +11,7 @@ paginate_path = "page"
 insert_anchor_links = "none"
 in_search_index = true
 
-template = "collection.html"
+template = "index.html"
 
 # Your own data
 [extra]

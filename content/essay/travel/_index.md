@@ -1,5 +1,5 @@
 +++
-title = "万物逆旅"
+title = "游历"
 description = ""
 date =2018-09-11
 weight = 0
@@ -11,11 +11,11 @@ paginate_path = "page"
 insert_anchor_links = "none"
 in_search_index = true
 
-template = "collection.html"
+template = "index.html"
+page_template = "page.html"
+transparent = true
 
 # Your own data
 [extra]
-collection = "travel"
-background_image = "/photo/002.jpg"
+collection = "notes"
 +++
-

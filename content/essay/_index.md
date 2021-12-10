@@ -1,5 +1,5 @@
 +++
-title = "笔记"
+title = "个人文字"
 description = ""
 date =2018-09-11
 weight = 0
@@ -13,7 +13,7 @@ in_search_index = true
 
 template = "index.html"
 page_template = "page.html"
-transparent = true
+transparent = false
 
 # Your own data
 [extra]

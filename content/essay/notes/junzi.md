@@ -1,16 +1,13 @@
 +++
 title = "筠子的歌"
 description = "总要有些随风，有些入梦，有些长留在心中，于是，有些疯狂，有些迷惘，有时唱"
-
-date =2003-09-18
-weight = 0
-draft = false
 slug = "junzi"
 
-template = "page.html"
+date = 2003-09-28
+weight = 0
+draft = false
 
-# Your own data
-[extra]
+template = "page.html"
 +++
 
 很喜欢筠子的歌，下面是她几首歌的歌词。
