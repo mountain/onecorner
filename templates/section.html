@@ -39,6 +39,11 @@
 
                     <ul class="sidebar-nav">
                         {% block section %}
+                        {% for subsection in section.subsections | reverse %}
+                            {% if loop.first %} <hr> {% endif %}
+                            {% set child = get_section(path=subsection) %}
+                            <li class="sidebar-nav-item"><a href="{{child.path}}">{{child.title}}</a></li>
+                        {% endfor %}
                         {% for ancestor in section.ancestors | reverse %}
                             <hr>
                             {% set parent = get_section(path=ancestor) %}
@@ -50,7 +55,6 @@
                         <hr>
                         {% endblock section %}
                     </ul>
-
 
                     <ul class="sidebar-nav">
                         {% block sidebar_nav %}
