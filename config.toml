@@ -49,9 +49,5 @@ hyde_sticky = true
 hyde_reverse = true
 hyde_theme = ""
 hyde_links = [
-    {url = "/essay", name = "个人文字"},
-    {url = "/curiosity", name = "探索求知"},
-    {url = "/theotherway", name = "另类思考"},
-    {url = "/gallery", name = "影像记"},
     {url = "/about", name = "关于"},
 ]
