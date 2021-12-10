@@ -17,5 +17,4 @@ transparent = false
 
 # Your own data
 [extra]
-collection = "notes"
 +++

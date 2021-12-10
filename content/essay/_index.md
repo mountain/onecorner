@@ -1,7 +1,7 @@
 +++
 title = "个人文字"
 description = ""
-date =2018-09-11
+date = 2018-09-11
 weight = 0
 draft = false
 
@@ -17,5 +17,4 @@ transparent = false
 
 # Your own data
 [extra]
-collection = "notes"
 +++
