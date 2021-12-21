@@ -3,7 +3,7 @@ title = "关于"
 description = ""
 
 date =2021-12-10
-weight = 0
+weight = 4
 draft = false
 slug = "about"
 

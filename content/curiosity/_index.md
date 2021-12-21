@@ -2,7 +2,7 @@
 title = "探索求知"
 description = ""
 date =2018-09-11
-weight = 0
+weight = 1
 draft = false
 
 sort_by = "date"
