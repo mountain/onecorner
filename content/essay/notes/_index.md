@@ -2,7 +2,7 @@
 title = "笔记"
 description = ""
 date =2018-09-11
-weight = 0
+weight = 2
 draft = false
 
 sort_by = "date"

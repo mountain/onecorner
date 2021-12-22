@@ -2,8 +2,7 @@
 title = "連岳的一場即席發言"
 description = "從來沒見過連岳，只是從文字猜想他頗有稜角，但見面之后才發現，他非常文靜而內斂。"
 
-date = 2003-09-28
-weight = 0
+date = 2008-09-28
 draft = false
 slug = "lianyue"
 
