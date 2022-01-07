@@ -26,8 +26,11 @@
 
 <body class="{{ config.extra.hyde_theme }} {% if config.extra.hyde_reverse %}layout-reverse{% endif %}">
 {% block sidebar %}
-<div class="sidebar">
+<div class="sidebar" id="page-sidebar">
   <div class="container {% if config.extra.hyde_sticky %}sidebar-sticky{% endif %}">
+
+    <img src="/paintings/tree.jpg">
+
     <div class="sidebar-about">
       {% block sidebar_about %}
       <a href="{{ config.base_url }}"><h1>{{ config.title }}</h1></a>
@@ -36,6 +39,24 @@
       {% endif %}
       {% endblock sidebar_about %}
     </div>
+
+    {% set section = get_section(path=page.ancestors[0]) %}
+    <ul class="sidebar-nav">
+      {% for subsection in section.subsections | reverse %}
+      {% if loop.first %} <hr> {% endif %}
+      {% set child = get_section(path=subsection) %}
+      <li class="sidebar-nav-item"><a href="{{child.path}}">{{child.title}}</a></li>
+      {% endfor %}
+      {% for ancestor in section.ancestors | reverse %}
+      <hr>
+      {% set parent = get_section(path=ancestor) %}
+      {% for sibling in parent.subsections %}
+      {% set sibling_item = get_section(path=sibling) %}
+      <li class="sidebar-nav-item"><a href="{{sibling_item.path}}">{{sibling_item.title}}</a></li>
+      {% endfor %}
+      {% endfor %}
+      <hr>
+    </ul>
 
     <ul class="sidebar-nav">
       {% block sidebar_nav %}
@@ -48,7 +69,17 @@
 </div>
 {% endblock sidebar %}
 
-<div class="content container">
+<div class="content container" id="page-content">
+
+  <div class="breadcrumb">
+    <span><a href="/">首页</a></span>
+    {% for ancestor in page.ancestors | reverse %}
+    {% set parent = get_section(path=ancestor) %}
+    {% if parent.title %}-{% endif %}
+    <span><a href="{{parent.path}}">{{parent.title}}</a></span>
+    {% endfor %}
+  </div>
+
   {% block content %}
   <div class="post">
     <h2 class="post-title">{{ page.title }}</h2>
@@ -56,6 +87,7 @@
     {{ page.content | safe }}
   </div>
   {% endblock content %}
+
 </div>
 
 </body>

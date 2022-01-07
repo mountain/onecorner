@@ -45,7 +45,7 @@ ignored_content = []
 extra_syntaxes = []
 
 [extra]
-hyde_sticky = true
+hyde_sticky = false
 hyde_reverse = true
 hyde_theme = ""
 hyde_links = [

@@ -26,6 +26,46 @@
 
     <body class="{{ config.extra.hyde_theme }} {% if config.extra.hyde_reverse %}layout-reverse{% endif %}">
 
+        <div class="sidebar">
+            <div class="container {% if config.extra.hyde_sticky %}sidebar-sticky{% endif %}">
+                <img src="/paintings/tree.jpg">
+
+                <div class="sidebar-about">
+                    {% block sidebar_about %}
+                    <a href="{{ config.base_url }}"><h1>{{ config.title }}</h1></a>
+                    {% if config.description %}
+                    <p class="lead">{{config.description}}</p>
+                    {% endif %}
+                    {% endblock sidebar_about %}
+                </div>
+
+                <ul class="sidebar-nav">
+                    {% for subsection in section.subsections | reverse %}
+                    {% if loop.first %} <hr> {% endif %}
+                    {% set child = get_section(path=subsection) %}
+                    <li class="sidebar-nav-item"><a href="{{child.path}}">{{child.title}}</a></li>
+                    {% endfor %}
+                    {% for ancestor in section.ancestors | reverse %}
+                    <hr>
+                    {% set parent = get_section(path=ancestor) %}
+                    {% for sibling in parent.subsections %}
+                    {% set sibling_item = get_section(path=sibling) %}
+                    <li class="sidebar-nav-item"><a href="{{sibling_item.path}}">{{sibling_item.title}}</a></li>
+                    {% endfor %}
+                    {% endfor %}
+                    <hr>
+                </ul>
+
+                <ul class="sidebar-nav">
+                    {% block sidebar_nav %}
+                    {% for link in config.extra.hyde_links %}
+                    <li class="sidebar-nav-item"><a href="{{link.url}}">{{link.name}}</a></li>
+                    {% endfor %}
+                    {% endblock sidebar_nav %}
+                </ul>
+            </div>
+        </div>
+
         <div class="content container">
             <div class="breadcrumb">
             <span><a href="/">首页</a></span>
@@ -64,51 +104,12 @@
                             {{ page.title }}
                         </a>
                     </h3>
-                    {{ page.description | safe }}
                     <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+                    {{ page.description | safe }}
                 </div>
                 {% endfor %}
             </div>
         </div>
 
-        <div class="sidebar">
-            <div class="container {% if config.extra.hyde_sticky %}sidebar-sticky{% endif %}">
-                <div class="sidebar-about">
-                    {% block sidebar_about %}
-                        <a href="{{ config.base_url }}"><h1>{{ config.title }}</h1></a>
-                        {% if config.description %}
-                        <p class="lead">{{config.description}}</p>
-                        {% endif %}
-                    {% endblock sidebar_about %}
-                </div>
-
-                <ul class="sidebar-nav">
-                    {% for subsection in section.subsections | reverse %}
-                        {% if loop.first %} <hr> {% endif %}
-                        {% set child = get_section(path=subsection) %}
-                        <li class="sidebar-nav-item"><a href="{{child.path}}">{{child.title}}</a></li>
-                    {% endfor %}
-                    {% for ancestor in section.ancestors | reverse %}
-                        <hr>
-                        {% set parent = get_section(path=ancestor) %}
-                        {% for sibling in parent.subsections %}
-                            {% set sibling_item = get_section(path=sibling) %}
-                            <li class="sidebar-nav-item"><a href="{{sibling_item.path}}">{{sibling_item.title}}</a></li>
-                        {% endfor %}
-                    {% endfor %}
-                    <hr>
-                </ul>
-
-                <ul class="sidebar-nav">
-                    {% block sidebar_nav %}
-                    {% for link in config.extra.hyde_links %}
-                    <li class="sidebar-nav-item"><a href="{{link.url}}">{{link.name}}</a></li>
-                    {% endfor %}
-                    {% endblock sidebar_nav %}
-                </ul>
-            </div>
-        </div>
-
     </body>
-
 </html>

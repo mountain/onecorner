@@ -61,11 +61,10 @@ html {
 }
 @media (min-width: 48em) {
   .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
+    display: block;
+    float: right;
     width: 18rem;
+    height: 100%;
     text-align: left;
   }
 }
