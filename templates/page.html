@@ -73,7 +73,7 @@
 
   <div class="breadcrumb">
     <span><a href="/">首页</a></span>
-    {% for ancestor in page.ancestors | reverse %}
+    {% for ancestor in page.ancestors %}
     {% set parent = get_section(path=ancestor) %}
     {% if parent.title %}-{% endif %}
     <span><a href="{{parent.path}}">{{parent.title}}</a></span>
@@ -81,10 +81,12 @@
   </div>
 
   {% block content %}
-  <div class="post">
+  <div class="section">
+    <div class="post">
     <h2 class="post-title">{{ page.title }}</h2>
     <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
     {{ page.content | safe }}
+     </div>
   </div>
   {% endblock content %}
 
