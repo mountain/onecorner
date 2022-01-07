@@ -1,8 +1,8 @@
 +++
-title = "吉光片羽"
+title = "有效过程与自然律"
 description = ""
 date =2018-09-11
-weight = 0
+weight = 5
 draft = false
 
 sort_by = "date"
@@ -11,10 +11,20 @@ paginate_path = "page"
 insert_anchor_links = "none"
 in_search_index = true
 
-template = "index.html"
+template = "section.html"
+page_template = "page.html"
+transparent = false
 
-# Your own data
-[extra]
-collection = "notes"
 +++
 
+[下载](/downloads/epanlz.pdf)
+
+大约八年前，在参与集智周末计算和物理的研读活动的时候，就发现了 Robert Rosen 的这篇《有效过程与自然法则》写得很特别，非常富有洞见。但因为文章有些意 思相对曲折，读起来也有些困难，于是就产生了通过翻译来学习这篇文章的想法。说这篇文章特别，是因为计算机科学从 1930 年代开始，已然长成参天大树，学科的各个分支枝繁叶茂，发表的文章不计其数，但少有深入到学科源头去探讨一番的文章。也正因为如此，这篇富有哲理的文章也常读常新。
+
+举例来说，在文章的引言，作者把 McCulloch 和 Pitts 的工作与 Gödel 的发现并列，这里面的意味颇值得思考。从文章内容冒昧揣测，他作为生物学家的特有视角发挥了作用，尽管当时是 AI 寒冬，他仍然把 McCulloch 等人工作写入。不过由于时代的局限，罗森并没有把这部分工作的重要做充分的展开。今天，神经网络、深度学习获得了极大的发展，大家都意识到了神经网络在工程实践方面的重要，但如何从理论上申明罗森的视角的有趣之处呢?
+
+和罗伯特·罗森做的一样，让我们试着回到源头。在学科源头，“学习”是一个可以和“计算”并列的理论题目。从 1967 年 E. Mark Gold 的经典论文 Language identification in the limit 起，这一分支开始发展，后经 Leslie Valiant 的 PAC 理论开始成型。但我想提及一篇少为人知的重要论文，1996 年 R. Lathrop 在 ICML 上发表了 On the Learnability of the Uncomputable ，论文表明通过分析程序运行的时空行为，在概率意义上停机问题可学习。论文在可计算性和可学习性之间给我们找到了一块落脚石，同时论文的分析方法和算法信息论(AIT)里 Chaitin 常数 Ω 的渐进可计算性似乎有更进一步的联系。我们或许可以沿着可学习性这条小径重新思考罗伯特·罗森的所思所想。
+
+去年起，我利用零零散散的时间，开始了这个翻译。在朋友们的鼓励之下，今天终于把本文翻译完毕。最后，对集智和混沌巡洋舰几位小伙伴多年的支持，以及杨文波同学的校读，在此一并表示感谢。
+
+2021 年 5 月 明理
