@@ -1,7 +1,7 @@
 +++
-title = "吉光片羽"
+title = "山水风物"
 description = ""
-date =2018-09-11
+date = 2018-09-11
 weight = 0
 draft = false
 
@@ -11,10 +11,9 @@ paginate_path = "page"
 insert_anchor_links = "none"
 in_search_index = true
 
-template = "index.html"
+template = "section.html"
+page_template = "page.html"
+transparent = false
 
-# Your own data
-[extra]
-collection = "notes"
 +++
 
