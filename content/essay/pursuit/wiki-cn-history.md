@@ -8,8 +8,6 @@ slug = "wiki-cn-history"
 
 template = "page.html"
 
-# Your own data
-[extra]
 +++
 
 我所了解到的最早的Wiki是由索秘软件工作室（Softme Studio）发起WebPM项目的一个子项目jWiki。

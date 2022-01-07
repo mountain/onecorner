@@ -8,8 +8,6 @@ slug = "wiki-history-taiwan"
 
 template = "page.html"
 
-# Your own data
-[extra]
 +++
 
 我从Google上搜集了一些台湾的Wiki资料，发现台湾在Wiki方面的应用非常多，撰写的介绍Wiki的文章非常有价值。

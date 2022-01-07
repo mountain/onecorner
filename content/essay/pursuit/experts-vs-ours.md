@@ -8,8 +8,6 @@ slug = "experts-vs-ours"
 
 template = "page.html"
 
-# Your own data
-[extra]
 +++
 
 头些日子读了编目精灵的《维基百科搞笑词条》和《维基何时成为网络时代的第5大美人？》，和他讨论了维基百科条目质量的问题，

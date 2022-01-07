@@ -8,8 +8,6 @@ slug = "explore-wiki"
 
 template = "page.html"
 
-# Your own data
-[extra]
 +++
 
 Wiki的自组织特性使得我们可以探索很多写法，我参与维基百科有一段时间了，但总还有一些新的写法被探索出来，
