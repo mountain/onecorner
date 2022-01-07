@@ -40,7 +40,7 @@
       {% endblock sidebar_about %}
     </div>
 
-    {% set section = get_section(path=page.ancestors[0]) %}
+    {% set section = get_section(path=page.ancestors | last) %}
     <ul class="sidebar-nav">
       {% for subsection in section.subsections | reverse %}
       {% if loop.first %} <hr> {% endif %}
