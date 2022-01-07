@@ -13,9 +13,6 @@ in_search_index = true
 
 template = "section.html"
 page_template = "page.html"
-transparent = true
+transparent = false
 
-# Your own data
-[extra]
-collection = "notes"
 +++
