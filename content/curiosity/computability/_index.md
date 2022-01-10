@@ -1,7 +1,7 @@
 +++
 title = "有效过程与自然律"
 description = ""
-date =2018-09-11
+date =2021-05-11
 weight = 5
 draft = false
 
