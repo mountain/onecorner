@@ -7,6 +7,7 @@ description = "角落里的只言片语"
 
 # the default language, used in RSS and coming i18n
 default_language = "zh"
+lang = "zh"
 
 # Highlight all code blocks found
 highlight_code = false
@@ -15,11 +16,9 @@ highlight_code = false
 # See below for list of accepted values
 highlight_theme = "base16-ocean-dark"
 
-# Whether to generate a RSS feed automatically
 generate_rss = false
-
-# The number of articles to include in the RSS feed
 rss_limit = 20
+feed_filename = "feed.xml"
 
 # Whether to compile the Sass files found in the `sass` directory
 compile_sass = true
