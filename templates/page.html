@@ -98,7 +98,15 @@
     <h2 class="post-title">{{ page.title }}</h2>
     <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
     {{ page.content | safe }}
-     </div>
+    <div class="post-comments">
+        <a href="https://github.com/mountain/mountain/discussions/categories/blogcomments">
+            查看评论
+        </a>
+        <a href="https://github.com/mountain/mountain/discussions/new?category=blogcomments&title={{ page.slug }}">
+            留下评论
+        </a>
+    </div>
+    </div>
   </div>
   {% endblock content %}
 
