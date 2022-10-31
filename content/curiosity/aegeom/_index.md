@@ -18,7 +18,7 @@ transparent = false
 +++
 
 [Wiki 站](https://wiki.aegeom.org/)
-[下载](/downloads/appl-mingli.pdf)
+[初步的中文版下载](/downloads/appl-mingli.pdf)
 
 
 几千年来，形与数一直是数学最核心的研究对象。笛卡尔引入了坐标，将形与数有机的关联起来，后在函数概念的基础上，发展出了古典的分析学。
@@ -55,3 +55,6 @@ $$ 115 = 1 \times 10^2+ 1 \times 10 + 5 $$
 在此，我也想表达，如果我们的历程是数字丛林里的一次探险，那么探险的事业永远没有止境。
 
 附记：2022 年所有博士申请的尝试都失败了，我把博士申请的材料附[于此](/downloads/appl-mingli.pdf)。
+不管怎样，都还会继续前行，我也在寻找合作研究者和合作机会。
+
+有意者请联系我，发邮件至![我](/contact-mingli.png) 
