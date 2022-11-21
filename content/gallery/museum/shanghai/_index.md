@@ -18,6 +18,7 @@ transparent = false
 +++
 
 2005 年初到上海，就被上海博物馆里的各种展品迷住了，几年间估计得去了不下二十趟。
+对[青铜器](/technology/bronze/)的学习也是那时候开始的。
 
 ![刘鼎](liuding.jpeg)
 

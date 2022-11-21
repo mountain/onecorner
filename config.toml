@@ -16,9 +16,9 @@ highlight_code = false
 # See below for list of accepted values
 highlight_theme = "base16-ocean-dark"
 
-generate_rss = false
+generate_rss = true
 rss_limit = 20
-feed_filename = "feed.xml"
+feed_filename = "rss.xml"
 
 # Whether to compile the Sass files found in the `sass` directory
 compile_sass = true
@@ -31,7 +31,7 @@ build_search_index = false
 # If a link is invalid (404, 500, etc), the build will error.
 # Link checking can take a very long time if you have many links so this should
 # only enabled once in a while to catch any dead links.
-check_external_links = false
+check_external_links = true
 
 # A list of glob patterns specifying asset files to ignore when
 # processing the content directory.

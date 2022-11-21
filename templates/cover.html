@@ -7,13 +7,13 @@
 
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
-    {% if config.generate_rss %}
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") }}">
+    {% if config.generate_feed %}
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
     {% endif %}
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     {% block css %}
-    <link rel="stylesheet" href="{{ get_url(path="site.css", trailing_slash=false) }}">
+    <link rel="stylesheet" href='{{ get_url(path="site.css", trailing_slash=false) }}'>
     {% endblock css %}
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -64,7 +64,6 @@
                 <a class="link" href="/curiosity/computability">有效过程与自然律</a><br>
                 <a class="link" href="/curiosity/numbers">机器能数数吗？</a><br>
                 <a class="link" href="/curiosity/rediscovery">重新发现算术里的秘密</a><br>
-                <a class="link" href="/curiosity/bronze">中国古代青铜器</a><br>
             </div>
         </div>
         <div class="col-3" id="theotherway">
@@ -88,6 +87,21 @@
                 <a class="link" href="/gallery/city">城市</a><br>
                 <a class="link" href="/gallery/museum">博物馆</a><br>
                 <a class="link" href="/gallery/scenery">山水风物</a><br>
+            </div>
+        </div>
+    </div>
+    <div class="row full">
+        <div class="col-lg" style="z-index: -1">
+        </div>
+        <div class="col-3" id="humanity-technology">
+            <div class="category text-right">
+                <a class="link" href="/gallery">技术人文</a>
+            </div>
+            <div class="links text-right">
+                <a class="link" href="/technology/wiki">维基</a><br>
+                <a class="link" href="/technology/spacetime">变换的技术时空</a><br>
+                <a class="link" href="/technology/curiosity">AI、好奇心、教育</a><br>
+                <a class="link" href="/technology/bronze">中国古代青铜器</a><br>
             </div>
         </div>
     </div>

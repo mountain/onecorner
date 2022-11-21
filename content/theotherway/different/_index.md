@@ -2,7 +2,7 @@
 title = "异星杂谈"
 description = ""
 date =2018-09-11
-weight = 3
+weight = 1
 draft = false
 
 sort_by = "date"

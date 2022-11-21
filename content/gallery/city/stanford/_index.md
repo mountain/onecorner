@@ -2,7 +2,7 @@
 title = "斯坦福"
 description = ""
 date = 2009-03-29
-weight = 1
+weight = 3
 draft = false
 
 sort_by = "date"
