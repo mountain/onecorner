@@ -126,7 +126,23 @@
                 <div class="pagination-item"><a href="{{paginator.previous}}"><</a></div>
                 <div class="pagination-item"><a href="{{paginator.next}}">></a></div>
             </div>
+
+            <div id="disqus_thread"></div>
         </div>
+
+        <script>
+            var disqus_config = function () {
+            this.page.url = "{{ section.permalink | safe }}";
+            this.page.identifier = "{{ section.path | safe }}";
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://onecorner.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>请把 JavaScript 激活以便浏览 <a href="https://disqus.com/?ref_noscript">由 Disqus 提供的评论.</a></noscript>
 
     </body>
 </html>

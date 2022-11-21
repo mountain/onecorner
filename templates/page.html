@@ -99,10 +99,25 @@
     <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
     {{ page.content | safe }}
      </div>
+     <div id="disqus_thread"></div>
   </div>
   {% endblock content %}
 
 </div>
+
+<script>
+    var disqus_config = function () {
+    this.page.url = "{{ page.permalink | safe }}";
+    this.page.identifier = "{{ page.slug | safe }}";
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://onecorner.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>请把 JavaScript 激活以便浏览 <a href="https://disqus.com/?ref_noscript">由 Disqus 提供的评论.</a></noscript>
 
 </body>
 
