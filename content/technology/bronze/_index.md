@@ -17,7 +17,7 @@ transparent = false
 
 +++
 
-[下载](/downloads/bronze.pdf)
+[下载](/technology/bronze/bronze.pdf)
 
 诗人李白曾感叹道：“夫天地者，万物之逆旅也；光阴者，百代之过客也。”时间川流不息，人类的文明薪火相传。
 

@@ -17,7 +17,7 @@ transparent = false
 
 +++
 
-[下载](/downloads/curiosity.pdf)：这是一篇插图与意象俱佳的演示文档，写作目的一是参加好奇心大会，二是想消除我自己内心的困惑。
+[下载](/technology/curiosity/curiosity.pdf)：这是一篇插图与意象俱佳的演示文档，写作目的一是参加好奇心大会，二是想消除我自己内心的困惑。
 当时对AI发展的一些估计，在两年后已经逐步变成了《自然》杂志的文章了，飞速发展的世界！动荡不定的世界！
 
 ![零一](curiosity.001.jpeg)
