@@ -9,39 +9,79 @@ description = "角落里的只言片语"
 default_language = "zh"
 lang = "zh"
 
-# Highlight all code blocks found
-highlight_code = false
-
-# Which theme to use for the code highlighting.
-# See below for list of accepted values
-highlight_theme = "base16-ocean-dark"
-
-generate_rss = true
-rss_limit = 20
+minify_html = false
+generate_feed = true
 feed_filename = "rss.xml"
+rss_limit = 20
 
 # Whether to compile the Sass files found in the `sass` directory
 compile_sass = true
 
-# Whether to build a search index out of the pages and section
-# content for the `default_language`
-build_search_index = false
+[markdown]
+# When set to "true", all code blocks are highlighted.
+highlight_code = false
 
-# Go through every links in all content and check if the links are valid
-# If a link is invalid (404, 500, etc), the build will error.
-# Link checking can take a very long time if you have many links so this should
-# only enabled once in a while to catch any dead links.
-check_external_links = true
+# A list of directories used to search for additional `.sublime-syntax` and `.tmTheme` files.
+extra_syntaxes_and_themes = []
 
-# A list of glob patterns specifying asset files to ignore when
-# processing the content directory.
-# Defaults to none, which means all asset files are copied over to the public folder.
-# Example:
-#     ignored_content = ["*.{graphml,xlsx}", "temp.*"]
-ignored_content = []
+# The theme to use for code highlighting.
+# See below for list of allowed values.
+highlight_theme = "base16-ocean-dark"
 
-# A list of directories to search for additional `.sublime-syntax` files in.
-extra_syntaxes = []
+# When set to "true", emoji aliases translated to their corresponding
+# Unicode emoji equivalent in the rendered Markdown files. (e.g.: :smile: => 😄)
+render_emoji = false
+
+# Whether external links are to be opened in a new tab
+# If this is true, a `rel="noopener"` will always automatically be added for security reasons
+external_links_target_blank = false
+
+# Whether to set rel="nofollow" for all external links
+external_links_no_follow = false
+
+# Whether to set rel="noreferrer" for all external links
+external_links_no_referrer = false
+
+# Whether smart punctuation is enabled (changing quotes, dashes, dots in their typographic form)
+# For example, `...` into `…`, `"quote"` into `“curly”` etc
+smart_punctuation = false
+
+# Configuration of the link checker.
+[link_checker]
+# Skip link checking for external URLs that start with these prefixes
+skip_prefixes = [
+]
+
+# Skip anchor checking for external URLs that start with these prefixes
+skip_anchor_prefixes = [
+]
+
+# Treat internal link problems as either "error" or "warn", default is "error"
+internal_level = "error"
+
+# Treat external link problems as either "error" or "warn", default is "error"
+external_level = "error"
+
+# Various slugification strategies, see below for details
+# Defaults to everything being a slug
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+
+[search]
+# Whether to include the title of the page/section in the index
+include_title = true
+# Whether to include the description of the page/section in the index
+include_description = false
+# Whether to include the path of the page/section in the index
+include_path = false
+# Whether to include the rendered content of the page/section in the index
+include_content = true
+
+[translations]
+
+[languages]
 
 [extra]
 hyde_sticky = false
