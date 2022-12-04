@@ -17,7 +17,7 @@ transparent = false
 +++
 
 [视频](https://www.bilibili.com/video/BV1Lb411p7jL)
-[讲稿](/downloads/digging.pdf)
+[讲稿](/theotherway/digging/digging.pdf)
 
 ![第一页](digging.001.jpeg)
 
