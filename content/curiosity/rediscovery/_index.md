@@ -17,7 +17,7 @@ transparent = false
 
 +++
 
-[演示文档下载](/downloads/rediscovery.pdf)
+[演示文档下载](/curiosity/rediscovery/rediscovery.pdf)
 
 本文源自给 AHA 的一次讲座和在混沌巡洋舰群聊中我的发言。
 

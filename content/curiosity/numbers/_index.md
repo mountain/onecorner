@@ -17,7 +17,7 @@ transparent = false
 
 +++
 
-[演示文档下载](/downloads/numbers.pdf)
+[演示文档下载](/curiosity/numbers/numbers.pdf)
 
 在 2021 年 1 月集智年会上做了一个小的分享，去探讨机器能不能数数的问题。
 
