@@ -77,6 +77,8 @@
                     {% endblock sidebar_nav %}
                 </ul>
             </div>
+            <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-0167993545292434" data-ad-slot="2536171643"
+                 data-matched-content-ui-type="image_card_stacked" data-matched-content-rows-num="1" data-matched-content-columns-num="1"></ins>
         </div>
 
         <div class="content container">
@@ -132,15 +134,19 @@
         </div>
 
         <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <script>
             var disqus_config = function () {
-            this.page.url = "{{ section.permalink | safe }}";
-            this.page.identifier = "{{ section.path | safe }}";
+              this.page.url = "{{ section.permalink | safe }}";
+              this.page.identifier = "{{ section.path | safe }}";
             };
             (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://onecorner.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
+              var d = document, s = d.createElement('script');
+              s.src = 'https://onecorner.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
             })();
         </script>
         <noscript>请把 JavaScript 激活以便浏览 <a href="https://disqus.com/?ref_noscript">由 Disqus 提供的评论.</a></noscript>
