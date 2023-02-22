@@ -17,8 +17,9 @@ transparent = false
 
 +++
 
-[Wiki 站](https://wiki.aegeom.org/)
-[初步的中文版下载](/curiosity/aegeom/appl-mingli.pdf)
+* [初步的中文研究概述](/curiosity/aegeom/appl-mingli.pdf)
+* [英语论文第 2 节：基础概念](/curiosity/aegeom/appl-mingli.pdf)
+
 
 几千年来，形与数一直是数学最核心的研究对象。笛卡尔引入了坐标，将形与数有机的关联起来，后在函数概念的基础上，发展出了古典的分析学。然而我们追根溯源，会发现数可以理解成算术表达式的一种典范形式：举例来说，在十位进制下的数位制中，我们有
 
