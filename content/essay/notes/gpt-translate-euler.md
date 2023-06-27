@@ -72,6 +72,8 @@ Notum est inter Geometras cycloidem ordinariam esse in medio non resistente isoc
 中译：
 ```
 
+这个翻译的最终结果，可以在[这里](https://github.com/mountain/euler-demo/blob/main/001/001-07-zhs.pdf)看到。
+
 这次尝试学习到了一些冷门的小知识：古代印刷体里看着非常像 f 的字母其实是 s。
 
 如果有同好希望能够系统的翻译一些存世的经典文献，请和我联系。
