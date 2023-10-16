@@ -5,7 +5,7 @@ description = "观念产生于每个人的内心，却必须凭借语言来表�
 date =2007-02-11
 weight = 0
 draft = false
-slug = "temoral-spatial-cost"
+slug = "temporal-spatial-cost"
 template = "page.html"
 
 +++
