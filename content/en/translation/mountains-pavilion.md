@@ -1,5 +1,5 @@
 +++
-title = "Ode to the Love of Mountains Pavilion"
+title = "Ode to the Ai Shan Pavilion"
 description = "My family's patriarch just turned sixty. He has abandoned all worldly concerns and built a residence in the shade of Mengtang Mountain to dwell in. He spends his days wandering among the mountains, eventually constructing a pavilion on the northern hill."
 slug = "mountains-pavilion"
 
@@ -15,7 +15,7 @@ template = "page.html"
 
 家君甫六十，尽弃人间事，筑室于孟塘山之阴而居之，终日徜徉于群山之中，既乃作亭北冈，回眺周览，万象偃伏，据登临之要。度尝侍侧，家君曰：“何以名斯亭？”度对曰：“请名‘爱山’。”家君曰：“试言其意。”
 
-My family's patriarch just turned sixty. He has abandoned all worldly concerns and built a residence in the shade of Mengtang Mountain to dwell in. He spends his days wandering among the mountains, eventually constructing a pavilion on the northern hill. From this vantage point, one can look back and see all around; the world lies subdued at one's feet. It is a crucial spot for looking out over the landscape. Once, I was in attendance by his side. My family's patriarch asked, "What shall we name this pavilion?" I replied, "May I suggest calling it 'Love of Mountains'?" He said, "Please explain your reasoning."
+My family's patriarch just turned sixty. He has abandoned all worldly concerns and built a residence in the shade of Mengtang Mountain to dwell in. He spends his days wandering among the mountains, eventually constructing a pavilion on the northern hill. From this vantage point, one can look back and see all around; the world lies subdued at one's feet. It is a crucial spot for looking out over the landscape. Once, I was in attendance by his side. My family's patriarch asked, "What shall we name this pavilion?" I replied, "May I suggest calling it 'Ai Shan' (Love of Mountains)?" He said, "Please explain your reasoning."
 
 度对曰：“市朝山林，出处之趣异也，纷华淡泊，躁止之机不同也，而各求其志，各乐其乐，盖有终其身不相为也。”
 
@@ -43,7 +43,7 @@ The family patriarch chuckled and said, "You understand the exterior but not the
 
 “环吾之庐，左右一舍，而山之名闻者五。建霞标于苍巅，凛清风于千载，虽蕙帐其已空，想謦欬之犹在，小子其能知吾之心乎？”度对曰：“度不敏，诚不足以知此。”家君曰：“为吾志之。”度再拜曰：“唯唯。”退而书之，为《爱山亭记》。 
 
-"Surrounding my humble abode, to the left and right there's just one house, but the names of five renowned mountains can be heard. The rosy clouds mark their towering peaks, and the clear winds have howled for a millennium. Even though the sage's tent may now be empty, one can still imagine the lingering echoes of his coughs and sighs. Do you, young one, understand my heart?" I replied, "I am not wise enough to fully grasp this." My family patriarch said, "Then make it your aspiration." I bowed deeply twice, saying, "I will, I will." I then withdrew and recorded this, thus composing 'Ode to the Love of Mountains Pavilion'.
+"Surrounding my humble abode, to the left and right there's just one house, but the names of five renowned mountains can be heard. The rosy clouds mark their towering peaks, and the clear winds have howled for a millennium. Even though the sage's tent may now be empty, one can still imagine the lingering echoes of his coughs and sighs. Do you, young one, understand my heart?" I replied, "I am not wise enough to fully grasp this." My family patriarch said, "Then make it your aspiration." I bowed deeply twice, saying, "I will, I will." I then withdrew and recorded this, thus composing 'Ode to the Ai Shan Pavilion'.
 
 旃蒙赤奋若冬，季男度谨书。
 
