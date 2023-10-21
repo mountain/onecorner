@@ -1,0 +1,142 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+    {% if config.generate_feed %}
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
+    {% endif %}
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    {% block css %}
+    <link rel="stylesheet" href='{{ get_url(path="site.css", trailing_slash=false) }}'>
+    {% endblock css %}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0167993545292434" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SGQPYJ49V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6SGQPYJ49V');
+    </script>
+    {% block extra_head %}
+    {% endblock extra_head %}
+
+</head>
+
+<body class="cover-en">
+
+{% block content %}
+<div class="container">
+    <div class="row full">
+        <div class="col-3" id="title">
+            <div class="site-title text-center">
+                <a class="link" href="/">OC</a>
+                {% if config.generate_feed %}
+                <table style="display: inline">
+                    <tr><td>
+                        <a class="link" href="{{ get_url(path=config.feed_filename) | safe }}">
+                            <svg x="0px" y="0px" viewbox="0 0 485 485" style="enable-background:new 0 0 485 485; width: 16px; height: 16px; margin-top: -40px;">
+                                <g>
+                                    <path d="M339.708,400H400c-0.035-86.835-35.341-165.515-92.369-222.578C250.567,120.359,171.953,85.035,85.136,85v60.121
+                            C225.512,145.226,339.603,259.505,339.708,400z" style="fill:#FFFFFF;" />
+                                    <path d="M232.451,399.899c0.017,0,0.017,0.101,0.017,0.101h60.397c-0.052-57.304-23.345-109.187-60.996-146.869
+                            c-37.664-37.686-89.534-60.979-146.833-61.014v60.139c39.27,0.035,76.409,15.452,104.195,43.291
+                            C217.02,323.302,232.385,360.489,232.451,399.899z" style="fill:#FFFFFF;" />
+                                    <path d="M126.821,399.606c11.567,0,21.958-4.629,29.614-12.219c7.586-7.604,12.237-17.925,12.272-29.426
+                            c-0.035-11.502-4.686-21.844-12.307-29.466c-7.621-7.586-18.012-12.254-29.579-12.254c-11.555,0-21.928,4.668-29.549,12.237
+                            C89.681,336.086,85,346.459,85,357.961c0,11.502,4.681,21.84,12.272,29.426C104.876,394.96,115.266,399.606,126.821,399.606z"
+                                          style="fill:#FFFFFF;" />
+                                    <path d="M0,0v485h485V0H0z M455,455H30V30h425V455z" style="fill:#FFFFFF;" />
+                                </g>
+                            </svg>
+                        </a>
+                    </td></tr>
+                    <tr><td>
+                        <a class="link" href="{{ get_url(path='') | safe }}">
+                            <svg x="0px" y="0px" viewbox="0 0 210 210" style="enable-background:new 0 0 210 210; width: 16px; height: 16px; margin-top: -20px;">
+                                <g>
+                                    <path transform="scale(0.6) translate(27, 25)" d="m 223.87874,65.508573 0,0 0,0 q 8.57798,0 20.16773,9.213798 l 0,0 0,0 q 11.60092,9.213799 11.60092,13.341046 l 0,0 0,0 q 0,2.855608 -9.21379,11.433588 l 0,0 -3.81492,4.127245 0,0 q -4.76307,6.67052 -13.34105,28.58955 l 0,0 -3.81492,8.90147 6.67053,5.71121 0,0 q 1.27163,1.90746 1.90745,3.81492 l 0,0 0,0 q -0.63582,2.8556 -4.76306,3.49142 l 0,0 0,0 q -4.12725,0.63582 -18.73993,0.63582 l 0,0 -2.85561,0 0,0 q -20.64739,0.94815 -48.28879,3.49143 l 0,0 -1.90745,85.13282 0,0 Q 155.57839,283.41603 148.27205,285 l 0,0 0,0 q -6.03471,-1.26048 -6.03471,-24.77463 l 0,0 0,0 q -0.94815,-99.73436 -0.94815,-100.37017 l 0,0 0,0 q -14.61268,0.63581 -48.277622,5.39888 l 0,0 -1.907457,7.30634 0,0 q 0,0.31233 -0.323487,0.31233 l 0,0 -0.312332,0.63582 0,0 Q 81.566825,171.9246 76.16794,157.31192 l 0,0 -4.439578,-18.4276 0,0 Q 63.786201,110.93059 52.352613,88.699236 l 0,0 0,0 q 0,-2.855609 2.532121,-3.814915 l 0,0 14.300352,1.907458 0.312332,0 1.271638,0 0,0 q 10.485437,0 35.260064,-3.179096 l 0,0 0,0 q 24.77465,-3.16794 35.26007,-5.398884 l 0,0 0,-37.803347 0,0 q 0,-3.803759 -12.0694,-19.375748 l 0,0 0,0 Q 130.49142,15 137.47428,15 l 0,0 0,0 q 8.26565,0 19.54307,6.35819 l 0,0 0,0 q 11.26627,6.347036 11.26627,11.433589 l 0,0 0,0 q 0,0.635819 -1.42781,3.022929 l 0,0 0,0 q -1.4278,2.375955 -3.33526,12.069407 l 0,0 0,0 q -1.90746,9.682297 -2.85561,27.474075 l 0,0 0,0 q 17.15596,-1.907457 29.5377,-3.97108 l 0,0 0,0 q 12.3929,-2.063623 16.99979,-3.179095 l 0,0 0,0 q 4.6069,-1.115472 8.73415,-1.907457 l 0,0 0,0 q 4.12725,-0.791985 7.94216,-0.791985 z m -2.85561,19.375748 0,0 0,0 q -2.86676,-4.127246 -8.26564,-4.127246 l 0,0 -0.63582,0 -51.1444,4.450733 0,0 q -1.58397,22.231362 -1.58397,60.347032 l 0,0 46.69366,-7.30634 0,0 q 9.84962,-28.26606 12.23673,-36.68787 l 0,0 0,0 q 2.37596,-8.410661 2.69944,-16.676309 z m -85.45631,63.213799 5.72237,-0.94815 0,-59.41004 -45.422018,6.670522 0,0 q -7.306339,1.271638 -16.207804,4.138402 l 0,0 12.392893,53.999996 43.514559,-4.45073 z" style="fill:#FFFFFF;"/>
+                                    <path d="M0,0v210h210V0H0z M205,205H5V5h200V205z" style="fill:#FFFFFF;" />
+                                </g>
+                            </svg>
+                        </a>
+                    </td></tr>
+                </table>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-3" id="essay">
+            <div class="category text-right">
+                <a class="link" href="/essay">Blog</a>
+            </div>
+            <div class="links text-right">
+                <a class="link" href="/en/about">about</a>
+                <a class="link" href="/en/essay/thoughts">thoughts</a>
+                <a class="link" href="/en/essay/pursuit">pursuit</a>
+                <a class="link" href="/en/essay/notes">notes</a>
+                <a class="link" href="/en/essay/travel">travel</a>
+            </div>
+        </div>
+        <div class="col-3" id="curiosity">
+            <div class="category text-right">
+                <a class="link" href="/en/translation">Translations</a>
+            </div>
+            <div class="links text-right">
+                <a class="link" href="/en/translation/mountain-pavilion">in praise of mountain pavilion</a><br>
+            </div>
+        </div>
+        <div class="col-3" id="theotherway">
+            <div class="category text-right">
+                <a class="link" href="/en/research">Research</a>
+            </div>
+            <div class="links text-right">
+                <a class="link" href="/en/research/aegeom">arithmetic expression geometry</a><br>
+            </div>
+        </div>
+    </div>
+    <div class="row full">
+        <div class="col-lg" style="z-index: -1">
+        </div>
+        <div class="col-3" id="gallery">
+            <div class="category text-right">
+                <a class="link" href="/gallery">Photos</a>
+            </div>
+            <div class="links text-right">
+                <a class="link" href="/en/gallery/city">city</a><br>
+                <a class="link" href="/en/gallery/museum">museum</a><br>
+                <a class="link" href="/en/gallery/scenery">scenery</a><br>
+            </div>
+        </div>
+    </div>
+    <div class="row full">
+        <div class="col-lg" style="z-index: -1">
+        </div>
+        <div class="col-3" id="humanity-technology">
+            <div class="category text-right">
+                <a class="link" href="/en/technology">Tech</a>
+            </div>
+            <div class="links text-right">
+                <a class="link" href="/en/technology/wiki">wiki</a><br>
+                <a class="link" href="/technology/curiosity">ai, curiosity, education</a><br>
+            </div>
+        </div>
+    </div>
+</div>
+{% for page in section.pages | reverse %}{% endfor %}
+{% endblock content %}
+
+{% block footer %}
+{% endblock footer %}
+
+</body>
+</html>
