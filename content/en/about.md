@@ -10,7 +10,7 @@ draft = false
 template = "page-en.html"
 +++
 
-In 2014, this log stopped updating. I wanted to go back online three years ago, but I never managed to do so because of my busy work. Finally, I focused and set up the website again; it's now back online. Looking at the small articles I wrote more than a decade ago, I find them very amusing. However, I like the first post in all of those records, which says:
+In 2014, this blog stopped updating. I wanted to go back online three years ago, but I never managed to do so because of my busy work. Finally, I focused and set up the website again; it's now back online. Looking at the small articles I wrote more than a decade ago, I find them very amusing. However, I like the first post in all of those records, which says:
 
 > This is a rich and varied world, where people nestle their souls in different places, enacting different stories. Is there a broad, transparent, and bright mind that can embrace all of this?
 
