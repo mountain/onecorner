@@ -1,13 +1,13 @@
 +++
 title = "Ode to the Ai Shan Pavilion"
-description = "My family's patriarch just turned sixty. He has abandoned all worldly concerns and built a residence in the shade of Mengtang Mountain to dwell in. He spends his days wandering among the mountains, eventually constructing a pavilion on the northern hill."
+description = "My dearest father just turned sixty years old. He has left all worldly concerns behind and built a residence in the shade of Mengtang Mountain to dwell in. He spends his days wandering among the mountains, eventually constructing a pavilion on the northern ridge."
 slug = "mountains-pavilion"
 
 date = 2023-10-21
 weight = 0
 draft = false
 
-template = "page.html"
+template = "page-en.html"
 +++
 
 * by Huang Du (Song Dynasty)

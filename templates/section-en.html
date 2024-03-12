@@ -45,9 +45,9 @@
 
                 <div class="sidebar-about">
                     {% block sidebar_about %}
-                    <a href="{{ config.base_url }}"><h1>{{ config.title }}</h1></a>
+                    <a href="{{ config.base_url }}"><h1>OC Blog</h1></a>
                     {% if config.description %}
-                    <p class="lead">{{config.description}}</p>
+                    <p class="lead">Whispers in the corner</p>
                     {% endif %}
                     {% endblock sidebar_about %}
                 </div>
@@ -56,7 +56,7 @@
                     {% for subsection in section.subsections | reverse %}
                     {% if loop.first %} <hr> {% endif %}
                     {% set child = get_section(path=subsection) %}
-                    {% if child.path != '/en/'%}
+                    {% if child.path == '/en/'%}
                     <li class="sidebar-nav-item"><a href="{{child.path}}">{{child.title}}</a></li>
                     {% endif %}
                     {% endfor %}
@@ -65,7 +65,7 @@
                     {% set parent = get_section(path=ancestor) %}
                     {% for sibling in parent.subsections %}
                     {% set sibling_item = get_section(path=sibling) %}
-                    {% if sibling_item.path != '/en/'%}
+                    {% if sibling_item.path == '/en/'%}
                     <li class="sidebar-nav-item"><a href="{{sibling_item.path}}">{{sibling_item.title}}</a></li>
                     {% endif %}
                     {% endfor %}
@@ -76,7 +76,7 @@
                 <ul class="sidebar-nav">
                     {% block sidebar_nav %}
                     {% for link in config.extra.hyde_links %}
-                    <li class="sidebar-nav-item"><a href="{{link.url}}">{{link.name}}</a></li>
+                    <li class="sidebar-nav-item"><a href="/en/about/">About</a></li>
                     {% endfor %}
                     {% endblock sidebar_nav %}
                 </ul>
@@ -87,11 +87,12 @@
 
         <div class="content container">
             <div class="breadcrumb">
-            <span><a href="/">首页</a></span>
             {% for ancestor in section.ancestors | reverse %}
             {% set parent = get_section(path=ancestor) %}
-            {% if parent.title %}-{% endif %}
+            {% if parent.path is starting_with("/en/") %}
             <span><a href="{{parent.path}}">{{parent.title}}</a></span>
+            {% if not loop.last %}-{% endif %}
+            {% endif %}
             {% endfor %}
             </div>
 

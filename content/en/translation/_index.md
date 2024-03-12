@@ -1,5 +1,5 @@
 +++
-title = "translation"
+title = "Translation"
 description = ""
 date =2023-10-21
 weight = 2
@@ -11,8 +11,8 @@ paginate_path = "page"
 insert_anchor_links = "none"
 in_search_index = true
 
-template = "section.html"
-page_template = "page.html"
+template = "section-en.html"
+page_template = "page-en.html"
 transparent = false
 
 +++

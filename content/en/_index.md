@@ -1,5 +1,5 @@
 +++
-title = "One Corner"
+title = "OC Blog"
 description = "a personal blog"
 
 date = 2023-10-20
