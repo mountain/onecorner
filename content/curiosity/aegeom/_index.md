@@ -21,7 +21,7 @@ transparent = false
 * [英语论文第 2 节：基础概念](/curiosity/aegeom/aeg-paper-02.pdf)
 * [2023 年夏季的一个介绍性材料](/curiosity/aegeom/intro2.pdf)
 * [2024 年春季的一个介绍性材料](/curiosity/aegeom/invitation.pdf)
-
+* [来自算术表达式几何的邀请](/curiosity/invitation/)
 
 几千年来，形与数一直是数学最核心的研究对象。笛卡尔引入了坐标，将形与数有机的关联起来，后在函数概念的基础上，发展出了古典的分析学。然而我们追根溯源，会发现数可以理解成算术表达式的一种典范形式：举例来说，在十位进制下的数位制中，我们有
 
