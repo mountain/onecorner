@@ -1,6 +1,6 @@
 +++
 title = "六、未解决的基本问题"
-description = "基础性的、需要去解决的问题，反映了作者对领域的构想。"
+description = "基础性的、需要去解决的问题，以及作者对领域的一些构想。"
 date = 2024-03-07
 weight = 5
 draft = false

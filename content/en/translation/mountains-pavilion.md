@@ -15,7 +15,7 @@ template = "page-en.html"
 
 家君甫六十，尽弃人间事，筑室于孟塘山之阴而居之，终日徜徉于群山之中，既乃作亭北冈，回眺周览，万象偃伏，据登临之要。度尝侍侧，家君曰：“何以名斯亭？”度对曰：“请名‘爱山’。”家君曰：“试言其意。”
 
-My dearest father just turned sixty years old. He has left all worldly concerns behind and built a residence in the shade of Mengtang Mountain to dwell in. He spends his days wandering among the mountains, eventually building a pavilion on the northern ridge. This vantage point allows one to look back and see all around; the world is subdued at one's feet. The spot is ideal for looking out over the landscape. Once, I was by his side. "What should we call this pavilion?" My family patriarch asked. I responded, "May I suggest naming it 'Ai Shan' (Love of Mountains)?" Then he asked, "Please explain your reasoning."
+My dearest father just turned sixty years old. He has left all worldly concerns behind and built a residence in the shade of Mengtang Mountain to dwell in. He spends his days wandering among the mountains, eventually building a pavilion on the northern ridge. This vantage point allows one to look back and see all around; the world is subdued at one's feet. The spot is ideal for looking out over the landscape. Once, I was by his side. "What should we call this pavilion?" My father asked. I responded, "May I suggest naming it 'Ai Shan' (Love of Mountains)?" Then he asked, "Please explain your reasoning."
 
 度对曰：“市朝山林，出处之趣异也，纷华淡泊，躁止之机不同也，而各求其志，各乐其乐，盖有终其身不相为也。”
 
