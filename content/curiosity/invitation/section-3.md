@@ -1,6 +1,6 @@
 +++
-title = "三、进一步的研究"
-description = "几个相对小的研究问题"
+title = "三、进一步研究—几何篇"
+description = "我们从几何的侧面展现一个可以研究的有趣问题。"
 date = 2024-03-07
 weight = 2
 draft = false
@@ -16,3 +16,6 @@ template = "page.html"
 transparent = false
 
 +++
+
+算术扭曲与面积
+

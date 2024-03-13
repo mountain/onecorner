@@ -1,6 +1,6 @@
 +++
-title = "四、未解决的基本问题"
-description = "基础性的和需要去解决的问题，反映了作者对领域的想法"
+title = "四、进一步研究—分析篇"
+description = "我们从分析的侧面展现一个可以研究的有趣问题。"
 date = 2024-03-07
 weight = 3
 draft = false
@@ -16,3 +16,5 @@ template = "page.html"
 transparent = false
 
 +++
+
+加乘混合的积分运算规则

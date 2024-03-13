@@ -6,7 +6,7 @@ weight = 10
 draft = false
 
 sort_by = "date"
-paginate_by = 6
+paginate_by = 8
 paginate_path = "page"
 insert_anchor_links = "none"
 in_search_index = true

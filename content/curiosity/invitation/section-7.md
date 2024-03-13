@@ -1,10 +1,10 @@
 +++
-title = "六、未解决的基本问题"
-description = "基础性的、需要去解决的问题，反映了作者对领域的构想。"
+title = "七、更加狂野的想象"
+description = "延展开去的讨论和想象"
 date = 2024-03-07
-weight = 5
+weight = 4
 draft = false
-slug = "section-6"
+slug = "section-7"
 
 sort_by = "date"
 paginate_by = 5
@@ -16,3 +16,4 @@ template = "page.html"
 transparent = false
 
 +++
+

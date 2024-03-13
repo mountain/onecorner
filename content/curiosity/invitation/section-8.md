@@ -1,10 +1,10 @@
 +++
-title = "六、未解决的基本问题"
-description = "基础性的、需要去解决的问题，反映了作者对领域的构想。"
+title = "八、结语"
+description = "最后的总结"
 date = 2024-03-07
 weight = 5
 draft = false
-slug = "section-6"
+slug = "section-8"
 
 sort_by = "date"
 paginate_by = 5
@@ -16,3 +16,5 @@ template = "page.html"
 transparent = false
 
 +++
+
+
