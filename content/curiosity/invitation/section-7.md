@@ -1,6 +1,6 @@
 +++
-title = "七、更加狂野的想象"
-description = "延展开去的讨论和想象"
+title = "七、未解决的基本问题"
+description = "基础性的、需要去解决的问题，以及作者对领域的一些构想"
 date = 2024-03-07
 weight = 4
 draft = false
