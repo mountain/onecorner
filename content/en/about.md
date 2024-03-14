@@ -10,18 +10,16 @@ draft = false
 template = "page-en.html"
 +++
 
-In 2014, this blog stopped updating. I wanted to go back online three years ago, but I never managed to do so because of my busy work. Finally, I focused and set up the website again; it's now back online. Looking at the small articles I wrote more than a decade ago, I find them very amusing. However, I like the first post in all of those records, which says:
+The blog stopped updating in 2014, and I've been intending to relaunch it for the past three years. However, my hectic work life kept that from happening. Finally, I've managed to get the website settings right and it's back up again. Reading the little pieces I wrote over ten years ago, I can't help but find them amusing. But there's a special fondness for the very first piece I wrote, which reflects:
 
-> This is a rich and varied world, where people nestle their souls in different places, enacting different stories. Is there a broad, transparent, and bright mind that can embrace all of this?
+> We live in a world rich with diversity, where every person's soul finds its unique dwelling, each enacting their own story. Could there exist a heart so expansive, clear, and luminous as to embrace all these experiences?
 
-Everyone needs to have something bright in their heart to support their daily life.
+It's essential for everyone to have a spark of brightness in their hearts to light up their daily lives.
 
-What else can I say about myself? For instance, this little excerpt from "[Conversations on an Alien Planet](/theotherway/different)", I think it's also well-written and very true.
+What more could I say about myself? Take this excerpt from "[Alien Musings](/theotherway/different/)," for instance, which I believe is both eloquent and authentic:
 
-> I often feel that confusion, rather than making me complacent, actually grounds me because the confused me is not the arrogant me; and the clumsy me usually discovers a simple truth after a long search;
-> However, the real reward comes next, the joy of solving a small problem... We will feel a kind of pure, small obsession in the heart of the writer—love or curiosity.
-> This tiny pure obsession, for a person, will not be worn away by the years but instead bring happiness; for us humans, it's like an inexhaustible stream or a torch that is passed on forever.
+> I've often found comfort in confusion, as it keeps me humble – a reminder that my awkward self, after a lengthy quest, might grasp a simple truth. The true reward, then, is the joy of resolving a minor issue... We catch a glimpse of the writer's pure, simple dedication—driven by love or curiosity. Such unadulterated passion not only brings joy to the individual over time but also serves as an endless stream or a perpetually passing torch for humanity.
 
-In these years, the things I think and write about have matured more than they did over a decade ago, have integrated more into society, and have understood the complexity of the world more. I will strive to present the most beautiful thoughts to everyone.
+In recent years, my reflections and writings have evolved, becoming more mature and woven into the fabric of society, and my understanding of the world's complexities has deepened. I am committed to sharing the finest of my thoughts with you.
 
-If you have something to say and want to contact me, please send an email to ![me](/contact-mingli.png).
+If you'd like to get in touch, feel free to email me at ![Me](/contact-mingli.png).
