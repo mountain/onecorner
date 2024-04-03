@@ -38,10 +38,11 @@
 
         #score {
             font-family: monospace;
-            margin-top: 30px;
+            margin-bottom: 30px;
             font-size: 20px;
             padding-left: 20px;
             color: #172b36;
+            text-align: center;
         }
 
         #made {
@@ -56,13 +57,46 @@
         #made a {
             color: #172b36;
         }
+
+        #gameContainer {
+            display: flex;
+            justify-content: space-around; /* Adjust as needed */
+            align-items: center;
+            height: 100vh; /* Take up full viewport height */
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        #gameCanvas, #dataViz {
+            flex: 1; /* Allows each child to grow equally */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Adjust canvas and chart dimensions as needed */
+        #pongCanvas {
+            max-width: 100%;
+            max-height: 80vh; /* Adjust based on your layout */
+        }
+
+        #dataViz {
+            max-width: 100%;
+            max-height: 80vh; /* Adjust based on your layout */
+        }
     </style>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
 </head>
 
 <body>
-<div id="container">
-    <canvas id="pongCanvas" width="800" height="800"></canvas>
-    <div id="score"></div>
+<div id="gameContainer" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div id="gameCanvas">
+        <div>
+            <div id="score"></div>
+            <canvas id="pongCanvas" width="800" height="800"></canvas>
+        </div>
+    </div>
+    <div id="dataViz" style="width: 800px; height: 800px;"></div>
     <p id="made">
         originally made by <a href="https://koenvangilst.nl">Koen van Gilst</a> | source on
         <a href="https://github.com/vnglst/pong-wars">github</a><br/>
@@ -89,7 +123,7 @@
     const ctx = canvas.getContext("2d");
     const scoreElement = document.getElementById("score");
 
-    const BALLS_PER_TEAM = 10;
+    const BALLS_PER_TEAM = 100;
 
     const TEAM1 = colorPalette.MysticMint;
     const TEAM1_BALL = colorPalette.NocturnalExpedition;
@@ -97,7 +131,7 @@
     const TEAM2 = colorPalette.NocturnalExpedition;
     const TEAM2_BALL = colorPalette.MysticMint;
 
-    const squareSize = 25;
+    const squareSize = 5;
     const numSquaresX = canvas.width / squareSize;
     const numSquaresY = canvas.height / squareSize;
     let squares = [];
@@ -118,6 +152,8 @@
         balls.push({x: canvas.width / 4 * 1, y: canvas.height / (BALLS_PER_TEAM + 1) * i, dx: 5, dy: 5, color: TEAM1_BALL, controlled: false});
         balls.push({x: canvas.width / 4 * 3, y: canvas.height / (BALLS_PER_TEAM + 1) * i, dx: -5, dy: -5, color: TEAM2_BALL, controlled: false});
     }
+
+    let speeds = balls.map(ball => Math.sqrt(ball.dx ** 2 + ball.dy ** 2));
 
     function checkCollision(ball1, ball2) {
         const dx = ball1.x - ball2.x;
@@ -298,6 +334,9 @@
             }
         });
 
+        speeds = balls.map(ball => Math.sqrt(ball.dx ** 2 + ball.dy ** 2));
+        updateChart(speeds);
+
         requestAnimationFrame(draw);
     }
 
@@ -319,6 +358,72 @@
         }
     });
 
+    // Assuming you've calculated 'speeds' as shown above
+    const margin = {top: 10, right: 30, bottom: 30, left: 40},
+        width = 460 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
+
+    // Append the svg object to a specific div, and set its dimensions
+    const svg = d3.select("#dataViz")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+            `translate(${margin.left},${margin.top})`);
+
+    const x = d3.scaleLinear()
+        .domain([0, 1.5 * d3.max(speeds)]) // Adjust this based on your data
+        .range([0, width]);
+
+    svg.append("g")
+        .attr("transform", `translate(0, ${height})`)
+        .call(d3.axisBottom(x));
+
+    // Create the Y axis
+    const y = d3.scaleLinear()
+        .range([height, 0]);
+    y.domain([0, d3.max(speeds, function(d) { return +d; })]);   // Update function based on data structure
+    svg.append("g")
+        .call(d3.axisLeft(y));
+
+    function updateChart(speeds) {
+
+        // Set the ranges for x and y axes
+
+        // Assume svg, x, and y are already defined as in the initial setup
+        x.domain([0, 1.5 * d3.max(speeds)])
+
+        // Bin the data with the new speeds
+        const bins = d3.histogram()
+            .value(d => d)
+            .domain(x.domain())
+            .thresholds(x.ticks(100))(speeds); // Adjust the number of ticks/bins as needed
+
+        // Update the y-axis scale
+        y.domain([0, d3.max(bins, d => d.length)]);
+
+        // Select all bars on the graph, take them out, and reinsert with new data
+        const bars = svg.selectAll(".bar")
+            .data(bins);
+
+        // Exit selection: Remove any unnecessary bars
+        bars.exit().remove();
+
+        // Enter selection: Add new bars if needed
+        bars.enter().append("rect")
+            .attr("class", "bar")
+            .attr("x", 1)
+            .attr("transform", d => `translate(${x(d.x0)},${y(d.length)})`)
+            .attr("width", d => x(d.x1) - x(d.x0) - 1)
+            .attr("height", d => height - y(d.length))
+            .style("fill", "#69b3a2");
+
+        // Update selection: Update existing bars
+        bars.attr("transform", d => `translate(${x(d.x0)},${y(d.length)})`)
+            .attr("width", d => x(d.x1) - x(d.x0) - 1)
+            .attr("height", d => height - y(d.length));
+    }
 
 </script>
 </html>
