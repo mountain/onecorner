@@ -150,7 +150,7 @@
     let balls = [];
     for (let i = 0; i < BALLS_PER_TEAM; i++) {
         balls.push({x: canvas.width / 4 * 1, y: canvas.height / (BALLS_PER_TEAM + 1) * i, dx: 5, dy: 5, color: TEAM1_BALL, controlled: false});
-        balls.push({x: canvas.width / 4 * 3, y: canvas.height / (BALLS_PER_TEAM + 1) * i, dx: -5, dy: -5, color: TEAM2_BALL, controlled: false});
+        balls.push({x: canvas.width / 4 * 3, y: canvas.height / (BALLS_PER_TEAM + 1) * i, dx: -7, dy: -7, color: TEAM2_BALL, controlled: false});
     }
 
     let speeds = balls.map(ball => Math.sqrt(ball.dx ** 2 + ball.dy ** 2));
