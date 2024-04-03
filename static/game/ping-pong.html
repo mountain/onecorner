@@ -373,7 +373,7 @@
             `translate(${margin.left},${margin.top})`);
 
     const x = d3.scaleLinear()
-        .domain([0, 1.5 * d3.max(speeds)]) // Adjust this based on your data
+        .domain([0, 20]) // Adjust this based on your data
         .range([0, width]);
 
     svg.append("g")
@@ -383,47 +383,47 @@
     // Create the Y axis
     const y = d3.scaleLinear()
         .range([height, 0]);
-    y.domain([0, d3.max(speeds, function(d) { return +d; })]);   // Update function based on data structure
+    y.domain([0, 20]);   // Update function based on data structure
     svg.append("g")
         .call(d3.axisLeft(y));
 
-    function updateChart(speeds) {
+    const fixedBarWidth = 5; // Example fixed width for each bar
 
-        // Set the ranges for x and y axes
-
-        // Assume svg, x, and y are already defined as in the initial setup
-        x.domain([0, 1.5 * d3.max(speeds)])
-
-        // Bin the data with the new speeds
+    // Function to update the chart with new data
+    const updateChart = (speeds) => {
+        // Calculate bins manually or using d3.histogram with fixedBarWidth
         const bins = d3.histogram()
             .value(d => d)
             .domain(x.domain())
-            .thresholds(x.ticks(100))(speeds); // Adjust the number of ticks/bins as needed
+            .thresholds(x.ticks(40)) // Adjust as needed
+            (speeds);
 
-        // Update the y-axis scale
-        y.domain([0, d3.max(bins, d => d.length)]);
-
-        // Select all bars on the graph, take them out, and reinsert with new data
+        // Bind bins data to bars
         const bars = svg.selectAll(".bar")
             .data(bins);
 
-        // Exit selection: Remove any unnecessary bars
-        bars.exit().remove();
-
-        // Enter selection: Add new bars if needed
-        bars.enter().append("rect")
+        bars.enter()
+            .append("rect")
             .attr("class", "bar")
-            .attr("x", 1)
-            .attr("transform", d => `translate(${x(d.x0)},${y(d.length)})`)
-            .attr("width", d => x(d.x1) - x(d.x0) - 1)
+            .merge(bars)
+            .transition()
+            .duration(1000)
+            .attr("x", d => x(d.x0))
+            .attr("y", d => y(d.length))
+            .attr("width", fixedBarWidth) // Use the fixed width
             .attr("height", d => height - y(d.length))
-            .style("fill", "#69b3a2");
+            .attr("fill", "#69b3a2");
 
-        // Update selection: Update existing bars
-        bars.attr("transform", d => `translate(${x(d.x0)},${y(d.length)})`)
-            .attr("width", d => x(d.x1) - x(d.x0) - 1)
-            .attr("height", d => height - y(d.length));
-    }
+        bars.exit().remove();
+    };
+
+    // Make sure to initially create groups for axes in your SVG setup with class "x-axis" and "y-axis"
+    svg.append("g")
+        .attr("class", "x-axis")
+        .attr("transform", `translate(0,${height})`);
+
+    svg.append("g")
+        .attr("class", "y-axis");
 
 </script>
 </html>
