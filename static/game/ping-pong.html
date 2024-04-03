@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pong wars | Koen van Gilst</title>
+    <link rel="canonical" href="https://pong-wars.koenvangilst.nl/"/>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #172b36 0%, #d9e8e3 100%);
+        }
+
+        #container {
+            display: flex;
+            width: 100%;
+            max-width: 750px;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        #pongCanvas {
+            display: block;
+            border-radius: 4px;
+            overflow: hidden;
+            width: 100%;
+            margin-top: auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #score {
+            font-family: monospace;
+            margin-top: 30px;
+            font-size: 20px;
+            padding-left: 20px;
+            color: #172b36;
+        }
+
+        #made {
+            font-family: monospace;
+            margin-top: auto;
+            margin-bottom: 20px;
+            font-size: 12px;
+            padding-left: 20px;
+            text-align: center;
+        }
+
+        #made a {
+            color: #172b36;
+        }
+    </style>
+</head>
+
+<body>
+<div id="container">
+    <canvas id="pongCanvas" width="800" height="800"></canvas>
+    <div id="score"></div>
+    <p id="made">
+        originally made by <a href="https://koenvangilst.nl">Koen van Gilst</a> | source on
+        <a href="https://github.com/vnglst/pong-wars">github</a><br/>
+        modified by <a href="https://onecorner.org">Mingli Yuan</a> | source on
+        <a href="https://github.com/mountain/ping-ping-pong-pong">github</a>
+    </p>
+</div>
+</body>
+
+<script>
+    // Source palette: https://twitter.com/AlexCristache/status/1738610343499157872
+    const colorPalette = {
+        ArcticPowder: "#F1F6F4",
+        MysticMint: "#D9E8E3",
+        Forsythia: "#FFC801",
+        DeepSaffron: "#FF9932",
+        NocturnalExpedition: "#114C5A",
+        OceanicNoir: "#172B36",
+    };
+
+    // Idea for Pong wars: https://twitter.com/nicolasdnl/status/1749715070928433161
+
+    const canvas = document.getElementById("pongCanvas");
+    const ctx = canvas.getContext("2d");
+    const scoreElement = document.getElementById("score");
+
+    const BALLS_PER_TEAM = 10;
+
+    const TEAM1 = colorPalette.MysticMint;
+    const TEAM1_BALL = colorPalette.NocturnalExpedition;
+
+    const TEAM2 = colorPalette.NocturnalExpedition;
+    const TEAM2_BALL = colorPalette.MysticMint;
+
+    const squareSize = 25;
+    const numSquaresX = canvas.width / squareSize;
+    const numSquaresY = canvas.height / squareSize;
+    let squares = [];
+
+    for (let i = 0; i < numSquaresX; i++) {
+        squares[i] = [];
+        for (let j = 0; j < numSquaresY; j++) {
+            squares[i][j] = i < numSquaresX / 2 ? TEAM1 : TEAM2;
+        }
+    }
+
+    function randomNum(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    let balls = [];
+    for (let i = 0; i < BALLS_PER_TEAM; i++) {
+        balls.push({x: canvas.width / 4 * 1, y: canvas.height / (BALLS_PER_TEAM + 1) * i, dx: 5, dy: 5, color: TEAM1_BALL, controlled: false});
+        balls.push({x: canvas.width / 4 * 3, y: canvas.height / (BALLS_PER_TEAM + 1) * i, dx: -5, dy: -5, color: TEAM2_BALL, controlled: false});
+    }
+
+    function checkCollision(ball1, ball2) {
+        const dx = ball1.x - ball2.x;
+        const dy = ball1.y - ball2.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        return distance <= (squareSize / 2 + squareSize / 2); // Assuming all balls have the same size
+    }
+
+    function alternateColor(color) {
+        return color === TEAM1 ? TEAM2 : TEAM1;
+    }
+
+    function drawBalls() {
+        balls.forEach(ball => {
+            drawBall(ball.x, ball.y, ball.color); // Assumes drawBall function can be reused as is
+
+            // Update position and check for wall collisions
+            ball.x += ball.dx;
+            ball.y += ball.dy;
+
+            if (ball.x > canvas.width - squareSize / 2 || ball.x < squareSize / 2) {
+                ball.dx = -ball.dx;
+            }
+            if (ball.y > canvas.height - squareSize / 2 || ball.y < squareSize / 2) {
+                ball.dy = -ball.dy;
+            }
+
+            // Update game state based on the ball's new position
+            let bounce = updateSquareAndBounce(ball.x, ball.y, ball.dx, ball.dy, alternateColor(ball.color));
+            ball.dx = bounce.dx;
+            ball.dy = bounce.dy;
+        });
+    }
+
+    function drawBall(x, y, color) {
+        ctx.beginPath();
+        ctx.arc(x, y, squareSize / 2, 0, Math.PI * 2, false);
+        ctx.fillStyle = color;
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    function drawSquares() {
+        for (let i = 0; i < numSquaresX; i++) {
+            for (let j = 0; j < numSquaresY; j++) {
+                ctx.fillStyle = squares[i][j];
+                ctx.fillRect(i * squareSize, j * squareSize, squareSize, squareSize);
+            }
+        }
+    }
+
+    function updateSquareAndBounce(x, y, dx, dy, color) {
+        let updatedDx = dx;
+        let updatedDy = dy;
+
+        // Check multiple points around the ball's circumference
+        for (let angle = 0; angle < Math.PI * 2; angle += Math.PI / 4) {
+            let checkX = x + Math.cos(angle) * (squareSize / 2);
+            let checkY = y + Math.sin(angle) * (squareSize / 2);
+
+            let i = Math.floor(checkX / squareSize);
+            let j = Math.floor(checkY / squareSize);
+
+            if (i >= 0 && i < numSquaresX && j >= 0 && j < numSquaresY) {
+                if (squares[i][j] !== color) {
+                    squares[i][j] = color;
+
+                    // Determine bounce direction based on the angle
+                    if (Math.abs(Math.cos(angle)) > Math.abs(Math.sin(angle))) {
+                        updatedDx = -updatedDx;
+                    } else {
+                        updatedDy = -updatedDy;
+                    }
+
+                    //updatedDx += randomNum(-0.15, 0.15);
+                    //updatedDy += randomNum(-0.15, 0.15);
+                }
+            }
+        }
+
+        return {dx: updatedDx, dy: updatedDy};
+    }
+
+    function updateScoreElement() {
+        let team1Score = 0;
+        let team2Score = 0;
+        for (let i = 0; i < numSquaresX; i++) {
+            for (let j = 0; j < numSquaresY; j++) {
+                if (squares[i][j] === TEAM1) {
+                    team1Score++;
+                } else if (squares[i][j] === TEAM2) {
+                    team2Score++;
+                }
+            }
+        }
+
+        scoreElement.textContent = `day ${team1Score} | night ${team2Score}`;
+    }
+
+    function resolveCollision(ball1, ball2) {
+        const xVelocityDiff = ball1.dx - ball2.dx;
+        const yVelocityDiff = ball1.dy - ball2.dy;
+
+        const xDist = ball2.x - ball1.x;
+        const yDist = ball2.y - ball1.y;
+
+        // Prevent accidental overlap of balls
+        if (xVelocityDiff * xDist + yVelocityDiff * yDist >= 0) {
+
+            // Angle between the two colliding balls
+            const angle = -Math.atan2(ball2.y - ball1.y, ball2.x - ball1.x);
+
+            // Mass is same for both balls, so we use 1 for simplification
+            const m1 = 1;
+            const m2 = 1;
+
+            // Velocity before equation
+            const u1 = rotate({x: ball1.dx, y: ball1.dy}, angle);
+            const u2 = rotate({x: ball2.dx, y: ball2.dy}, angle);
+
+            // Velocity after 1d collision equation
+            const v1 = { x: u2.x, y: u1.y };
+            const v2 = { x: u1.x, y: u2.y };
+
+            // Final velocity after rotating axis back to original location
+            const vFinal1 = rotate(v1, -angle);
+            const vFinal2 = rotate(v2, -angle);
+
+            // Swap particle velocities for realistic bounce effect
+            ball1.dx = vFinal1.x;
+            ball1.dy = vFinal1.y;
+
+            ball2.dx = vFinal2.x;
+            ball2.dy = vFinal2.y;
+        }
+    }
+
+    function rotate(velocity, angle) {
+        const rotatedVelocities = {
+            x: velocity.x * Math.cos(angle) - velocity.y * Math.sin(angle),
+            y: velocity.x * Math.sin(angle) + velocity.y * Math.cos(angle)
+        };
+
+        return rotatedVelocities;
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawSquares();
+        drawBalls();
+        updateScoreElement();
+
+        balls.forEach((ball, index) => {
+            // Move the ball
+            ball.x += ball.dx;
+            ball.y += ball.dy;
+
+            // Correct position to ensure the ball remains within boundaries
+            ball.x = Math.max(squareSize / 2, Math.min(canvas.width - squareSize / 2, ball.x));
+            ball.y = Math.max(squareSize / 2, Math.min(canvas.height - squareSize / 2, ball.y));
+
+            // Check for wall collisions, adjusted for ball radius
+            if (ball.x - squareSize / 2 <= 0 || ball.x + squareSize / 2 >= canvas.width) {
+                ball.dx *= -1;
+            }
+            if (ball.y - squareSize / 2 <= 0 || ball.y + squareSize / 2 >= canvas.height) {
+                ball.dy *= -1;
+            }
+
+            // Check for collisions with other balls
+            for (let i = 0; i < balls.length; i++) {
+                if (i !== index) { // Don't check a ball against itself
+                    if (checkCollision(ball, balls[i])) {
+                        resolveCollision(ball, balls[i]);
+                    }
+                }
+            }
+        });
+
+        requestAnimationFrame(draw);
+    }
+
+    requestAnimationFrame(draw);
+
+    document.addEventListener('keydown', (event) => {
+        const moveSpeed = 8; // Adjusted for smoother gameplay
+        const controlledBall = balls.find(ball => ball.controlled); // Find the player-controlled ball
+        if (!controlledBall) return; // Exit if no controlled ball is found
+
+        switch(event.key) {
+            case "ArrowUp":
+                controlledBall.dy = -moveSpeed; // Move up
+                break;
+            case "ArrowDown":
+                controlledBall.dy = moveSpeed; // Move down
+                break;
+            // Consider adding ArrowLeft and ArrowRight for full movement control
+        }
+    });
+
+
+</script>
+</html>
