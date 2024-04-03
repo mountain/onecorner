@@ -123,7 +123,7 @@
     const ctx = canvas.getContext("2d");
     const scoreElement = document.getElementById("score");
 
-    const BALLS_PER_TEAM = 100;
+    const BALLS_PER_TEAM = 1000;
 
     const TEAM1 = colorPalette.MysticMint;
     const TEAM1_BALL = colorPalette.NocturnalExpedition;
@@ -342,22 +342,6 @@
 
     requestAnimationFrame(draw);
 
-    document.addEventListener('keydown', (event) => {
-        const moveSpeed = 8; // Adjusted for smoother gameplay
-        const controlledBall = balls.find(ball => ball.controlled); // Find the player-controlled ball
-        if (!controlledBall) return; // Exit if no controlled ball is found
-
-        switch(event.key) {
-            case "ArrowUp":
-                controlledBall.dy = -moveSpeed; // Move up
-                break;
-            case "ArrowDown":
-                controlledBall.dy = moveSpeed; // Move down
-                break;
-            // Consider adding ArrowLeft and ArrowRight for full movement control
-        }
-    });
-
     // Assuming you've calculated 'speeds' as shown above
     const margin = {top: 10, right: 30, bottom: 30, left: 40},
         width = 460 - margin.left - margin.right,
@@ -383,7 +367,7 @@
     // Create the Y axis
     const y = d3.scaleLinear()
         .range([height, 0]);
-    y.domain([0, 20]);   // Update function based on data structure
+    y.domain([0, 70]);   // Update function based on data structure
     svg.append("g")
         .call(d3.axisLeft(y));
 
@@ -395,12 +379,11 @@
         const bins = d3.histogram()
             .value(d => d)
             .domain(x.domain())
-            .thresholds(x.ticks(40)) // Adjust as needed
+            .thresholds(x.ticks(100)) // Adjust as needed
             (speeds);
 
         // Bind bins data to bars
-        const bars = svg.selectAll(".bar")
-            .data(bins);
+        const bars = svg.selectAll(".bar").data(bins);
 
         bars.enter()
             .append("rect")
