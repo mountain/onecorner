@@ -10,7 +10,9 @@ draft = false
 template = "page-en.html"
 +++
 
-* by Huang Du (Song Dynasty)
+### *爱山亭记*
+
+* by Huang Du (Song Dynasty), 黄度（宋代）
 * Translated by ChatGPT, modified by Mingli Yuan
 
 家君甫六十，尽弃人间事，筑室于孟塘山之阴而居之，终日徜徉于群山之中，既乃作亭北冈，回眺周览，万象偃伏，据登临之要。度尝侍侧，家君曰：“何以名斯亭？”度对曰：“请名‘爱山’。”家君曰：“试言其意。”
