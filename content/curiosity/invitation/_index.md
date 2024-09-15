@@ -25,4 +25,4 @@ transparent = false
 我在 2022 年初的选择是“出发”。尽管这篇文档的每一节都有许多问题没有解决，经过两年多的整理和探索，我逐步可以用相对严格的语言来陈述这些问题了。
 所以，我想邀请大家一起来探索这片未知的海域。这个演示文档是我对这个领域的一个简要介绍，希望能够引起大家的兴趣，也多少奢望能够得到指导、指正和帮助。
 
-下载：[演示文档](/curiosity/invitation/invitation.pdf)、中文文稿、英文文稿
+下载：[演示文档一](/curiosity/invitation/invitation.pdf)、[演示文档二](/curiosity/invitation/aeg-v2.pdf)
