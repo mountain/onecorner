@@ -16,6 +16,8 @@ template = "page.html"
 
 那么下面，让我们看看这个有趣的短篇。
 
+![中文房间](/essay/notes/chinese-room.png)
+
 > 《中文房间》
 >
 > ChatGPT 原创，苑明理做了非常小的修订
