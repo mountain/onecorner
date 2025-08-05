@@ -3,11 +3,13 @@ title = "About"
 description = ""
 slug = "about"
 
-date = 2023-10-21
 weight = 0
 draft = false
 
 template = "page-en.html"
+
+date = 2023-10-21
+
 +++
 
 The blog stopped updating in 2014, and I've been intending to relaunch it for the past three years. However, my hectic work life kept that from happening. Finally, I've managed to get the website settings right and it's back up again. Reading the little pieces I wrote over ten years ago, I can't help but find them amusing. But there's a special fondness for the very first piece I wrote, which reflects:

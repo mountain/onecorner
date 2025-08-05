@@ -1,7 +1,6 @@
 +++
 title = "笔记"
 description = ""
-date =2018-09-11
 weight = 2
 draft = false
 
@@ -15,4 +14,6 @@ template = "section.html"
 page_template = "page.html"
 transparent = false
 
+[extra]
+date = 2018-09-11
 +++

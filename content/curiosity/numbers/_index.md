@@ -1,7 +1,6 @@
 +++
 title = "机器能数数吗？"
 description = ""
-date =2021-01-11
 weight = 5
 draft = false
 
@@ -14,6 +13,9 @@ in_search_index = true
 template = "section.html"
 page_template = "page.html"
 transparent = false
+
+[extra]
+date = 2021-01-11
 
 +++
 

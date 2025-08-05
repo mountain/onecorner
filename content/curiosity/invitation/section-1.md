@@ -1,7 +1,6 @@
 +++
 title = "一、故事的开端"
 description = "从 2015 年开始的探索如何一步步走到 2021 年，通过故事来展示研究的初衷和进入的问题"
-date = 2024-03-07
 weight = 0
 draft = false
 slug = "section-1"
@@ -14,6 +13,7 @@ in_search_index = true
 
 template = "page.html"
 transparent = false
+date = 2024-03-07
 
 +++
 

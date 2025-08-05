@@ -1,7 +1,6 @@
 +++
 title = "维基"
 description = ""
-date = 2012-10-11
 weight = 0
 draft = false
 
@@ -14,6 +13,9 @@ in_search_index = true
 template = "section.html"
 page_template = "page.html"
 transparent = false
+
+[extra]
+date = 2012-10-11
 
 +++
 

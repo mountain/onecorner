@@ -1,7 +1,6 @@
 +++
 title = "山水风物"
 description = ""
-date = 2018-09-11
 weight = 0
 draft = false
 

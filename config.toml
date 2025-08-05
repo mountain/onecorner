@@ -7,12 +7,11 @@ description = "角落里的只言片语"
 
 # the default language, used in RSS and coming i18n
 default_language = "zh"
-lang = "zh"
 
 minify_html = false
-generate_feed = true
-feed_filename = "rss.xml"
-rss_limit = 20
+generate_feeds = true
+feed_filenames = ["rss.xml"]
+feed_limit = 20
 
 # Whether to compile the Sass files found in the `sass` directory
 compile_sass = true

@@ -3,11 +3,12 @@ title = "Letter to Song Yuansi"
 description = "The mist and smoke have cleared, the mountains and sky share the same hue. Drifting along the current, we move freely east and west. From Fuyang to Tonglu, a distance of about a hundred miles, the landscape is extraordinary, unique in the world."
 slug = "letter-to-song-yuansi"
 
-date = 2024-08-09
 weight = 0
 draft = false
 
 template = "page-en.html"
+date = 2024-08-09
+
 +++
 
 ### *与宋元思书*
@@ -60,4 +61,3 @@ those entangled in worldly affairs, upon glimpsing the valleys, forget to return
 Horizontal branches provide shade, making it dim even during the day;
 
 sparse branches and leaves cast overlapping shadows, allowing glimpses of sunlight at times.
-

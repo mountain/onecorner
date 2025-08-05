@@ -1,7 +1,6 @@
 +++
 title = "二、基本概念与示例"
 description = "建立讨论需要的最基本的概念，展示示例性的算术表达式空间"
-date = 2024-03-07
 weight = 1
 draft = false
 slug = "section-2"
@@ -14,6 +13,7 @@ in_search_index = true
 
 template = "page.html"
 transparent = false
+date = 2024-03-07
 
 +++
 
@@ -136,6 +136,3 @@ $(a, I)$ 代表了这个数学对象的分析学和函数论的侧面。
 
 为了展示这个领域在分析学和函数论方面的丰富性，我们指出赋值场 $a$ 是 Laplacian 的特征函数。但这是个普遍结论还是只在第一类算术表达式空间成立呢？
 目前我们还不清楚。
-
-
-

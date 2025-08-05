@@ -2,15 +2,12 @@
 title = "Wikimania之旅"
 description = "越过几万里，经伊斯坦布尔，飞机降落在特拉维夫。一下飞机就遇到了来自南非的Slashme、以色列的Ijon、美国的Sj和JWild。在火车站我们又遇到了来自菲律宾的Sky_Harbor，我们这个国际小团队一起乘车去海法，就这样开始了七天的Wikimania之旅。"
 
-date = 2011-08-11
 weight = 0
 draft = false
 slug = "wikimania"
 
 template = "page.html"
-
-# Your own data
-[extra]
+date = 2011-08-11
 +++
 
 越过几万里，经伊斯坦布尔，飞机降落在特拉维夫。一下飞机就遇到了来自南非的Slashme、以色列的Ijon、美国的Sj和JWild。在火车站我们又遇到了来自菲律宾的Sky_Harbor，我们这个国际小团队一起乘车去海法，就这样开始了七天的Wikimania之旅。

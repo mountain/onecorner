@@ -1,7 +1,6 @@
 +++
 title = "十二信简"
 description = ""
-date = 2023-07-07
 weight = 0
 draft = false
 
@@ -14,6 +13,10 @@ in_search_index = true
 template = "section.html"
 page_template = "page.html"
 transparent = false
+
+[extra]
+date = 2023-07-07
+
 +++
 
 ## 信之一：海洋

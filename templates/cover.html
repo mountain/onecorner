@@ -8,7 +8,7 @@
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
     {% if config.generate_feed %}
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path=config.feed_filenames[0]) | safe }}">
     {% endif %}
 
     <link rel="stylesheet" href="{{ get_url(path='/css/bootstrap.min.css', trailing_slash=false) }}">
@@ -44,7 +44,7 @@
                 {% if config.generate_feed %}
                 <table style="display: inline">
                     <tr><td>
-                <a class="link" href="{{ get_url(path=config.feed_filename) | safe }}">
+                <a class="link" href="{{ get_url(path=config.feed_filenames[0]) | safe }}">
                 <svg x="0px" y="0px" viewbox="0 0 485 485" style="enable-background:new 0 0 485 485; width: 16px; height: 16px; margin-top: -40px;">
                     <g>
                         <path d="M339.708,400H400c-0.035-86.835-35.341-165.515-92.369-222.578C250.567,120.359,171.953,85.035,85.136,85v60.121

@@ -1,7 +1,6 @@
 +++
 title = "博物馆"
 description = ""
-date = 2018-09-11
 weight = 1
 draft = false
 

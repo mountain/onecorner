@@ -2,12 +2,11 @@
 title = "国内比较早的几个Wiki"
 description = "Wiki究竟什么时候最先引入的中文圈子，这是一个大家从未探讨过的话题。我只能就我所了解到的，说一说国内比较早的几个Wiki。"
 
-date = 2004-08-22
 draft = false
 slug = "wiki-cn-history"
 
 template = "page.html"
-
+date = 2004-08-22
 +++
 
 我所了解到的最早的Wiki是由索秘软件工作室（Softme Studio）发起WebPM项目的一个子项目jWiki。

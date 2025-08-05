@@ -1,7 +1,6 @@
 +++
 title = "格但斯克"
 description = ""
-date = 2010-07-09
 weight = 7
 draft = false
 
@@ -14,6 +13,9 @@ in_search_index = true
 template = "section.html"
 page_template = "page.html"
 transparent = false
+
+[extra]
+date = 2010-07-09
 
 +++
 

@@ -1,7 +1,6 @@
 +++
 title = "旧金山"
 description = ""
-date = 2019-04-19
 weight = 4
 draft = false
 
@@ -14,6 +13,10 @@ in_search_index = true
 template = "section.html"
 page_template = "page.html"
 transparent = false
+
+
+[extra]
+date = 2019-04-19
 
 +++
 

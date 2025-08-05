@@ -1,7 +1,6 @@
 +++
 title = "Translation"
 description = ""
-date =2023-10-21
 weight = 2
 draft = false
 
@@ -14,5 +13,8 @@ in_search_index = true
 template = "section-en.html"
 page_template = "page-en.html"
 transparent = false
+
+[extra]
+date = 2023-10-21
 
 +++

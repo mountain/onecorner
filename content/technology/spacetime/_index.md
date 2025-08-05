@@ -1,7 +1,6 @@
 +++
 title = "变换的技术时空"
 description = ""
-date =2019-06-11
 weight = 0
 draft = false
 
@@ -14,6 +13,9 @@ in_search_index = true
 template = "section.html"
 page_template = "page.html"
 transparent = false
+
+[extra]
+date = 2019-06-11
 
 +++
 

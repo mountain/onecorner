@@ -1,7 +1,6 @@
 +++
 title = "影像记"
 description = ""
-date = 2018-09-11
 weight = 4
 draft = false
 

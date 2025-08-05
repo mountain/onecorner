@@ -2,11 +2,11 @@
 title = "The Illusion of Cross-Language Understanding?"
 description = "With the widespread adoption of large language models (LLMs), cross-language communication has become easier and more efficient than ever. Their powerful translation capabilities seem to have broken down language barriers, enabling people from different linguistic backgrounds to communicate instantly. However, does this convenience truly foster deeper cultural understanding, or is it causing our cross-language abilities to decline, leading to increasingly superficial exchanges?"
 
-date =2024-10-27
 weight = 0
 draft = false
 slug = "the-illusion"
 template = "page.html"
+date = 2024-10-27
 
 +++
 

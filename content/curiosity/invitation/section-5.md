@@ -1,7 +1,6 @@
 +++
 title = "五、进一步研究—计算篇"
 description = "我们从计算的侧面展现一个可以研究的有趣问题"
-date = 2024-03-07
 weight = 4
 draft = false
 slug = "section-5"
@@ -14,6 +13,7 @@ in_search_index = true
 
 template = "page.html"
 transparent = false
+date = 2024-03-07
 
 +++
 

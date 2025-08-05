@@ -2,12 +2,11 @@
 title = "台湾的Wiki资料"
 description = "我从Google上搜集了一些台湾的Wiki资料，发现台湾在Wiki方面的应用非常多，撰写的介绍Wiki的文章非常有价值。"
 
-date = 2004-08-22
 draft = false
 slug = "wiki-history-taiwan"
 
 template = "page.html"
-
+date = 2004-08-22
 +++
 
 我从Google上搜集了一些台湾的Wiki资料，发现台湾在Wiki方面的应用非常多，撰写的介绍Wiki的文章非常有价值。

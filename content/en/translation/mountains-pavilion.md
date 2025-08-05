@@ -3,11 +3,12 @@ title = "Ode to the Ai Shan Pavilion"
 description = "My dearest father just turned sixty years old. He has left all worldly concerns behind and built a residence in the shade of Mengtang Mountain to dwell in. He spends his days wandering among the mountains, eventually constructing a pavilion on the northern ridge."
 slug = "mountains-pavilion"
 
-date = 2023-10-21
 weight = 0
 draft = false
 
 template = "page-en.html"
+date = 2023-10-21
+
 +++
 
 ### *爱山亭记*
@@ -50,5 +51,3 @@ My father chuckled and said, "You understand the exterior but not the interior; 
 旃蒙赤奋若冬，季男度谨书。
 
 Respectfully written by Du, the youngest son, in the winter of the Yi Chou year
-
-

@@ -3,11 +3,11 @@ title = "网摘：培根《论读书》"
 description = "王佐良译培根之《论读书》：读书足以怡情，足以傅彩，足以长才。其怡情也，最见于独处幽居之时；其傅彩也，最见于高谈阔论之中；其长才也，最见于处世判事之际。"
 slug = "onstudy"
 
-date = 2007-02-11
 weight = 0
 draft = false
 
 template = "page.html"
+date = 2007-02-11
 +++
 
 * 王佐良译培根之《论读书》

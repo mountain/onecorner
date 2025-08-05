@@ -1,7 +1,6 @@
 +++
 title = "游历"
 description = ""
-date =2018-09-11
 weight = 3
 draft = false
 
@@ -14,5 +13,8 @@ in_search_index = true
 template = "section.html"
 page_template = "page.html"
 transparent = false
+
+[extra]
+date = 2018-09-11
 
 +++

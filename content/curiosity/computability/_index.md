@@ -1,7 +1,6 @@
 +++
 title = "有效过程与自然律"
 description = ""
-date =2021-05-11
 weight = 5
 draft = false
 
@@ -14,6 +13,9 @@ in_search_index = true
 template = "section.html"
 page_template = "page.html"
 transparent = false
+
+[extra]
+date = 2021-05-11
 
 +++
 

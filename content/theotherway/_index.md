@@ -1,7 +1,6 @@
 +++
 title = "另类思考"
 description = ""
-date =2018-09-11
 weight = 2
 draft = false
 

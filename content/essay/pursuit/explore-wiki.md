@@ -2,12 +2,11 @@
 title = "探索Wiki"
 description = "Wiki的自组织特性使得我们可以探索很多写法，我参与维基百科有一段时间了，但总还有一些新的写法被探索出来……"
 
-date = 2004-08-31
 draft = false
 slug = "explore-wiki"
 
 template = "page.html"
-
+date = 2004-08-31
 +++
 
 Wiki的自组织特性使得我们可以探索很多写法，我参与维基百科有一段时间了，但总还有一些新的写法被探索出来，

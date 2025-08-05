@@ -1,7 +1,6 @@
 +++
 title = "海法"
 description = ""
-date = 2011-08-02
 weight = 9
 draft = false
 
@@ -14,6 +13,9 @@ in_search_index = true
 template = "section.html"
 page_template = "page.html"
 transparent = false
+
+[extra]
+date = 2011-08-02
 
 +++
 

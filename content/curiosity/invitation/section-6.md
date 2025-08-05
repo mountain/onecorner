@@ -1,7 +1,6 @@
 +++
 title = "六、进一步研究—复数化"
 description = "引入复数的必要和可能性"
-date = 2024-03-07
 weight = 5
 draft = false
 slug = "section-6"
@@ -14,6 +13,7 @@ in_search_index = true
 
 template = "page.html"
 transparent = false
+date = 2024-03-07
 
 +++
 

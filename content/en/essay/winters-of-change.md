@@ -3,11 +3,12 @@ title = "Winters of Change"
 description = "Winter, the year’s final breath, arrives with its shortest days, but for a child, it never means a shortage of joy—especially when the world is wrapped in a soft, white blanket of snow. I remember..."
 slug = "winters-of-change"
 
-date = 2024-09-09
 weight = 0
 draft = false
 
 template = "page-en.html"
+date = 2024-09-09
+
 +++
 
 Winter, the year’s final breath, arrives with its shortest days, but for a child, it never means a shortage of joy—especially when the world is wrapped in a soft, white blanket of snow. I remember the wonder that filled me, like a snowflake fluttering in my chest, as the first flurries began to fall. The air would echo with children's laughter ringing like bells across the yards, and we would rush out, feet pounding against the earth, to greet winter’s magic.

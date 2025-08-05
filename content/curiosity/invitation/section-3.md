@@ -1,7 +1,6 @@
 +++
 title = "三、进一步研究—几何篇"
 description = "我们从几何的侧面展现一个可以研究的有趣问题"
-date = 2024-03-07
 weight = 2
 draft = false
 slug = "section-3"
@@ -14,6 +13,7 @@ in_search_index = true
 
 template = "page.html"
 transparent = false
+date = 2024-03-07
 
 +++
 
@@ -40,8 +40,3 @@ transparent = false
 ![页三二](/curiosity/invitation/032.jpeg)
 
 让我们先试验一下，能不能画出来一个有意义的圈。
-
-
-
-
-

@@ -3,11 +3,12 @@ title = "As Autumn Unfolds"
 description = "In yonder chair, thou sit'st, gazing through pane, where light in fleeting dance does gently flow."
 slug = "as-autumn-unfolds"
 
-date = 2024-03-13
 weight = 0
 draft = false
 
 template = "page-en.html"
+
+date = 2024-03-13
 +++
 * by Xiaosong Gao (高晓松)
 * Translated by ChatGPT
@@ -29,7 +30,3 @@ template = "page-en.html"
 
 > In Autumn's embrace, where dreams and love collide,<br/>
 > A sonnet of life, in whispered tones, confide.<br/>
-
-
-
-
