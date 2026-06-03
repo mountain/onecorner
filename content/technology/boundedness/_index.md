@@ -1,5 +1,5 @@
 +++
-title = ""
+title = "认知有限性"
 description = ""
 weight = 0
 draft = false
