@@ -8,7 +8,7 @@ RUN ["zola", "build"]
 FROM caddy:2-alpine
 COPY --from=builder /app/public /srv
 COPY <<'EOF' /etc/caddy/Caddyfile
-:{$PORT}
+:{$PORT:8080}
 root * /srv
 file_server
 try_files {path} {path}/ /index.html
