@@ -22,6 +22,8 @@ body
   width: 100%
 
 .site-title
+  position: relative
+  z-index: 1
   font-size: 3em
   font-weight: bold
   color: whitesmoke
@@ -39,11 +41,15 @@ body
   color: whitesmoke
 
 .category
+  position: relative
+  z-index: 1
   font-size: 2em
   font-weight: bold
   color: whitesmoke
 
 .links
+  position: relative
+  z-index: 1
   background-color: rgba(240, 240, 240, 0)
   margin-bottom: 1em
 
@@ -55,6 +61,7 @@ body
 
 a.link
   color: whitesmoke
+  text-decoration: none
 
 a.link:hover
   color: whitesmoke
@@ -65,18 +72,23 @@ a.link:hover
 
 #essay
   background: rgba(240, 240, 240, 0.1)
+  z-index: 6
 
 #curiosity
   background: rgba(240, 240, 240, 0.1)
+  z-index: 5
 
 #theotherway
   background: rgba(240, 240, 240, 0.1)
+  z-index: 4
 
 #gallery
   background: rgba(240, 240, 240, 0.1)
+  z-index: 2
 
 #humanity-technology
   background: rgba(240, 240, 240, 0.1)
+  z-index: 3
 
 @media (min-width: 1024px)
     #title

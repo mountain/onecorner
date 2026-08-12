@@ -12,13 +12,11 @@
     {% endif %}
 
     <link rel="stylesheet" href="{{ get_url(path='/css/bootstrap.min.css', trailing_slash=false) }}">
-    <script src="{{ get_url(path='/js/bootstrap.bundle.min.js', trailing_slash=false) }}"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer src="{{ get_url(path='/js/bootstrap.bundle.min.js', trailing_slash=false) }}"></script>
     {% block css %}
     <link rel="stylesheet" href='{{ get_url(path="site.css", trailing_slash=false) }}'>
     {% endblock css %}
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0167993545292434" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SGQPYJ49V"></script>
     <script>
@@ -76,19 +74,19 @@
             </div>
         </div>
         <div class="col-3" id="essay">
-            <div class="category text-right">
+            <div class="category text-end">
                 <a class="link" href="/en/essay/">Blog</a>
             </div>
-            <div class="links text-right">
+            <div class="links text-end">
                 <a class="link" href="/en/about">about</a><br>
                 <a class="link" href="/en/essay/winters-of-change/">winters of change</a><br><br><br>
             </div>
         </div>
         <div class="col-3" id="curiosity">
-            <div class="category text-right">
+            <div class="category text-end">
                 <a class="link" href="/en/translation">Translations</a>
             </div>
-            <div class="links text-right">
+            <div class="links text-end">
                 <a class="link" href="/en/translation/mountains-pavilion">ode to the ai-shan pavilion</a><br>
                 <a class="link" href="/en/translation/letter-to-song-yuansi">letter to song yuansi</a><br>
             </div>

@@ -17,15 +17,7 @@ feed_limit = 20
 compile_sass = true
 
 [markdown]
-# When set to "true", all code blocks are highlighted.
-highlight_code = false
-
-# A list of directories used to search for additional `.sublime-syntax` and `.tmTheme` files.
-extra_syntaxes_and_themes = []
-
-# The theme to use for code highlighting.
-# See below for list of allowed values.
-highlight_theme = "base16-ocean-dark"
+# Syntax highlighting remains disabled by omitting [markdown.highlighting].
 
 # When set to "true", emoji aliases translated to their corresponding
 # Unicode emoji equivalent in the rendered Markdown files. (e.g.: :smile: => 😄)
@@ -34,6 +26,9 @@ render_emoji = false
 # Whether external links are to be opened in a new tab
 # If this is true, a `rel="noopener"` will always automatically be added for security reasons
 external_links_target_blank = false
+
+# Whether to add rel="external" to external links
+external_links_external = false
 
 # Whether to set rel="nofollow" for all external links
 external_links_no_follow = false
