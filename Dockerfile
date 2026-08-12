@@ -1,5 +1,5 @@
 # Stage 1: Build the Zola site
-FROM ghcr.io/getzola/zola:v0.23.2 AS builder
+FROM ghcr.io/getzola/zola:v0.23.2-alpine AS builder
 WORKDIR /app
 COPY . .
 RUN ["zola", "build"]
